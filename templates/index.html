@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Data Storyteller</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .slide-fade-enter-active, .slide-fade-leave-active {
+            transition: all 0.3s ease;
+        }
+        .slide-fade-enter-from, .slide-fade-leave-to {
+            transform: translateX(20px);
+            opacity: 0;
+        }
+        .chart-container {
+            height: 300px;
+            width: 100%;
+        }
+        .loader {
+            border-top-color: #0F4C81;
+            animation: spinner 1.5s linear infinite;
+        }
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .dragging {
+            border: 2px dashed #4A90E2;
+            background-color: rgba(74, 144, 226, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    {% raw %}
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-chart-line text-2xl text-blue-900"></i>
+                        </div>
+                        <div class="ml-4 font-bold text-lg text-gray-800">Corporate Data Storyteller</div>
+                    </div>
+                    <div>
+                        <span class="text-sm text-gray-600">Transform Business Data into Actionable Insights</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Step Indicator -->
+            <div class="mb-8">
+                <div class="flex items-center justify-between">
+                    <div v-for="(step, index) in steps" :key="index" class="flex flex-col items-center w-1/3">
+                        <div class="flex items-center">
+                            <div :class="`h-10 w-10 rounded-full flex items-center justify-center text-white
+                                ${currentStep > index ? 'bg-green-500' : currentStep === index ? 'bg-blue-800' : 'bg-gray-300'}`">
+                                <span v-if="currentStep > index"><i class="fas fa-check"></i></span>
+                                <span v-else>{{ index + 1 }}</span>
+                            </div>
+                            <div v-if="index < steps.length - 1" :class="`h-1 w-24 sm:w-40 md:w-64 
+                                ${currentStep > index ? 'bg-green-500' : 'bg-gray-300'}`"></div>
+                        </div>
+                        <div class="text-center mt-2 text-sm">{{ step }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File Upload Section -->
+            <div v-if="currentStep === 0" class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Upload Your Business Data</h2>
+                <p class="text-gray-600 mb-6">
+                    Upload a CSV, Excel, or JSON file containing your business data to begin the analysis process.
+                </p>
+
+                <div 
+                    :class="`border-2 border-dashed rounded-lg p-10 text-center ${isDragging ? 'dragging' : 'border-gray-300'}`"
+                    @dragover.prevent="isDragging = true"
+                    @dragleave.prevent="isDragging = false"
+                    @drop.prevent="onFileDrop"
+                    @click="triggerFileInput"
+                >
+                    <input type="file" ref="fileInput" class="hidden" @change="onFileChange" accept=".csv, .xls, .xlsx, .json">
+                    <i class="fas fa-cloud-upload-alt text-5xl text-blue-800 mb-4"></i>
+                    <h3 class="text-lg font-medium text-gray-700">Drag and drop your file here</h3>
+                    <p class="text-gray-500 mt-1">or click to browse</p>
+                    <p class="text-gray-400 text-sm mt-2">Supported formats: CSV, Excel, JSON</p>
+                </div>
+
+                <div v-if="uploadError" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mt-4">
+                    <p>{{ uploadError }}</p>
+                </div>
+
+                <div v-if="isUploading" class="mt-6 text-center">
+                    <div class="loader h-10 w-10 rounded-full border-4 border-gray-200 mx-auto"></div>
+                    <p class="mt-2 text-gray-600">Uploading your file...</p>
+                </div>
+
+                <div v-if="previewData.length" class="mt-6">
+                    <h3 class="text-lg font-medium text-gray-800 mb-3">Data Preview</h3>
+                    <div class="overflow-x-auto shadow-md rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th v-for="(col, index) in columns" :key="index" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        {{ col }}
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr v-for="(row, rowIndex) in previewData" :key="rowIndex">
+                                    <td v-for="(col, colIndex) in columns" :key="colIndex" class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        {{ row[col] }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <button @click="startAnalysis" class="bg-blue-800 hover:bg-blue-900 text-white font-medium py-2 px-6 rounded-lg">
+                            Begin Analysis
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Results Section -->
+            <div v-if="currentStep === 1" class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Data Analysis Results</h2>
+
+                <div v-if="isAnalyzing" class="text-center py-10">
+                    <div class="loader h-12 w-12 rounded-full border-4 border-gray-200 mx-auto"></div>
+                    <p class="mt-4 text-gray-600">Analyzing your data and generating insights...</p>
+                </div>
+
+                <div v-else>
+                    <!-- Key Insights Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-blue-50 border border-blue-100 rounded-lg p-5">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-chart-line text-blue-800 mr-2"></i>
+                                <h3 class="text-lg font-medium text-gray-800">Key Metrics</h3>
+                            </div>
+                            <p class="text-gray-600 mb-3">Summary of main business metrics identified in your data.</p>
+                            <ul class="text-sm text-gray-700">
+                                <li v-for="(metric, index) in keyMetrics" :key="index" class="flex justify-between mb-2">
+                                    <span>{{ metric.name }}</span>
+                                    <span class="font-medium">{{ formatNumber(metric.mean) }}</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-amber-50 border border-amber-100 rounded-lg p-5">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-arrow-trend-up text-amber-600 mr-2"></i>
+                                <h3 class="text-lg font-medium text-gray-800">Growth Trends</h3>
+                            </div>
+                            <p class="text-gray-600 mb-3">Key trends and changes detected in your business data.</p>
+                            <ul class="text-sm text-gray-700">
+                                <li v-for="(trend, metric) in growthTrends" :key="metric" class="flex justify-between mb-2">
+                                    <span>{{ metric }}</span>
+                                    <span :class="`font-medium ${trend.direction === 'increasing' ? 'text-green-600' : trend.direction === 'decreasing' ? 'text-red-600' : 'text-gray-600'}`">
+                                        {{ trend.direction === 'increasing' ? '↑' : trend.direction === 'decreasing' ? '↓' : '→' }}
+                                        {{ Math.abs(trend.pct_change).toFixed(1) }}%
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-green-50 border border-green-100 rounded-lg p-5">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-lightbulb text-green-600 mr-2"></i>
+                                <h3 class="text-lg font-medium text-gray-800">Recommendations</h3>
+                            </div>
+                            <p class="text-gray-600 mb-3">Actionable recommendations based on your data.</p>
+                            <ul class="text-sm text-gray-700 list-disc pl-5 space-y-2">
+                                <li v-for="(rec, index) in recommendations.slice(0, 3)" :key="index">
+                                    {{ rec }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Visualizations -->
+                    <h3 class="text-lg font-medium text-gray-800 mb-4">Data Visualizations</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div v-for="(viz, index) in visualizations" :key="index" class="bg-white border rounded-lg overflow-hidden shadow-sm">
+                            <img :src="viz.path" :alt="viz.title" class="w-full object-contain h-64">
+                            <div class="p-4">
+                                <h4 class="font-medium text-gray-800">{{ viz.title }}</h4>
+                                <p class="text-sm text-gray-600 mt-1">{{ viz.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 text-right">
+                        <button @click="goToStoryGeneration" class="bg-blue-800 hover:bg-blue-900 text-white font-medium py-2 px-6 rounded-lg">
+                            Create Business Story
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story Generation Section -->
+            <div v-if="currentStep === 2" class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">Generate Business Story</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Report Title</label>
+                        <input v-model="storyParams.title" type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Corporate Performance Analysis">
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 mb-2">Target Audience</label>
+                        <input v-model="storyParams.audience" type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Executive Leadership Team">
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 mb-2">Business Context</label>
+                        <textarea v-model="storyParams.business_context" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-24" placeholder="We're analyzing Q2 performance to identify growth opportunities and optimize our marketing strategy."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 mb-2">Report Style</label>
+                        <div class="grid grid-cols-1 gap-3 mt-4">
+                            <div v-for="(style, key) in corporateStyles" :key="key"
+                                @click="storyParams.corporate_style = key"
+                                :class="`border rounded-lg p-3 cursor-pointer ${storyParams.corporate_style === key ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`">
+                                <div class="font-medium text-gray-800">{{ style.name }}</div>
+                                <div class="text-xs text-gray-500 mt-1">{{ style.style }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="generatingStory" class="text-center py-10">
+                    <div class="loader h-12 w-12 rounded-full border-4 border-gray-200 mx-auto"></div>
+                    <p class="mt-4 text-gray-600">Generating your business story...</p>
+                </div>
+
+                <div v-if="storyPreview" class="mt-8">
+                    <h3 class="text-lg font-medium text-gray-800 mb-3">Story Preview</h3>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="prose max-w-none" v-html="formatMarkdown(storyPreview)"></div>
+                    </div>
+
+                    <div class="mt-6 flex justify-between">
+                        <a :href="pdfUrl" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> View Full Report
+                        </a>
+                        <a :href="pdfUrl" download class="bg-blue-800 hover:bg-blue-900 text-white font-medium py-2 px-6 rounded-lg flex items-center">
+                            <i class="fas fa-download mr-2"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div v-else class="mt-6 text-right">
+                    <button @click="generateStory" class="bg-blue-800 hover:bg-blue-900 text-white font-medium py-2 px-6 rounded-lg">
+                        Generate Business Story
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t mt-12 py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <div class="flex items-center">
+                            <i class="fas fa-chart-line text-xl text-blue-900 mr-2"></i>
+                            <span class="font-semibold text-gray-800">Corporate Data Storyteller</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-1">Transform business data into actionable insights</p>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        © 2025 Corporate Data Storyteller. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    {% endraw %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <script>
+        const { createApp, ref, reactive, computed } = Vue;
+
+        createApp({
+            setup() {
+                // Step management
+                const steps = ['Upload Data', 'Analyze Insights', 'Create Story'];
+                const currentStep = ref(0);
+
+                // File upload
+                const fileInput = ref(null);
+                const isDragging = ref(false);
+                const isUploading = ref(false);
+                const uploadError = ref('');
+                const sessionId = ref('');
+                const fileName = ref('');
+                const columns = ref([]);
+                const previewData = ref([]);
+                const rowCount = ref(0);
+
+                // Analysis
+                const isAnalyzing = ref(false);
+                const insights = ref([]);
+                const visualizations = ref([]);
+                const recommendations = ref([]);
+                const keyMetrics = ref([]);
+                const growthTrends = ref({});
+                const outliers = ref({});
+                const segmentComparison = ref({});
+
+                // Story generation
+                const corporateStyles = {
+                    finance: {
+                        name: "Financial Insights",
+                        style: "Precise analysis with clear ROI and performance metrics"
+                    },
+                    tech: {
+                        name: "Tech Performance",
+                        style: "Forward-looking analysis with trend identification"
+                    },
+                    marketing: {
+                        name: "Market Analysis",
+                        style: "Customer-focused insights with engagement highlights"
+                    },
+                    operations: {
+                        name: "Operational Excellence",
+                        style: "Efficiency-focused analysis with improvements"
+                    },
+                    executive: {
+                        name: "Executive Summary",
+                        style: "High-level strategic insights with decision points"
+                    }
+                };
+
+                const storyParams = reactive({
+                    title: '',
+                    audience: 'Executive Leadership Team',
+                    business_context: '',
+                    corporate_style: 'executive'
+                });
+
+                const generatingStory = ref(false);
+                const storyPreview = ref('');
+                const pdfUrl = ref('');
+
+                // Methods
+                const triggerFileInput = () => {
+                    fileInput.value.click();
+                };
+
+                const onFileDrop = (event) => {
+                    isDragging.value = false;
+                    const file = event.dataTransfer.files[0];
+                    if (file) {
+                        uploadFile(file);
+                    }
+                };
+
+                const onFileChange = (event) => {
+                    const file = event.target.files[0];
+                    if (file) {
+                        uploadFile(file);
+                    }
+                };
+
+                const uploadFile = async (file) => {
+                    // Reset previous data
+                    uploadError.value = '';
+                    previewData.value = [];
+                    columns.value = [];
+
+                    // Check file type
+                    const validTypes = ['.csv', '.xls', '.xlsx', '.json'];
+                    const fileExt = file.name.substring(file.name.lastIndexOf('.')).toLowerCase();
+                    if (!validTypes.includes(fileExt)) {
+                        uploadError.value = 'Invalid file type. Please upload a CSV, Excel, or JSON file.';
+                        return;
+                    }
+
+                    // Upload file
+                    isUploading.value = true;
+                    const formData = new FormData();
+                    formData.append('file', file);
+
+                    try {
+                        const response = await fetch('/upload/', {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        if (!response.ok) {
+                            const error = await response.json();
+                            throw new Error(error.detail || 'Error uploading file');
+                        }
+
+                        const data = await response.json();
+                        sessionId.value = data.session_id;
+                        fileName.value = data.file_name;
+                        columns.value = data.columns;
+                        previewData.value = data.preview;
+                        rowCount.value = data.row_count;
+                    } catch (error) {
+                        uploadError.value = error.message;
+                    } finally {
+                        isUploading.value = false;
+                    }
+                };
+
+                const startAnalysis = async () => {
+                    isAnalyzing.value = true;
+                    try {
+                        const response = await fetch(`/analyze/${sessionId.value}`, {
+                            method: 'POST'
+                        });
+
+                        if (!response.ok) {
+                            const error = await response.json();
+                            throw new Error(error.detail || 'Error analyzing data');
+                        }
+
+                        const data = await response.json();
+                        insights.value = data.insights;
+                        visualizations.value = data.visualizations;
+                        recommendations.value = data.recommendations;
+
+                        // Extract key metrics from insights
+                        const dataSummary = insights.value.find(insight => insight.type === 'data_summary');
+                        if (dataSummary && dataSummary.content.key_metrics) {
+                            keyMetrics.value = dataSummary.content.key_metrics;
+                        }
+
+                        // Extract growth trends
+                        const growthAnalysis = insights.value.find(insight => insight.type === 'growth_analysis');
+                        if (growthAnalysis) {
+                            growthTrends.value = growthAnalysis.content;
+                        }
+
+                        // Extract outliers
+                        const outliersInsight = insights.value.find(insight => insight.type === 'outliers');
+                        if (outliersInsight) {
+                            outliers.value = outliersInsight.content;
+                        }
+
+                        // Extract segment comparison
+                        const segmentInsight = insights.value.find(insight => insight.type === 'segment_comparison');
+                        if (segmentInsight) {
+                            segmentComparison.value = segmentInsight.content;
+                        }
+
+                        // Move to next step
+                        currentStep.value = 1;
+                    } catch (error) {
+                        alert('Error analyzing data: ' + error.message);
+                    } finally {
+                        isAnalyzing.value = false;
+                    }
+                };
+
+                const goToStoryGeneration = () => {
+                    currentStep.value = 2;
+                    // Pre-fill business context based on data
+                    const dataType = insights.value.find(insight => insight.type === 'data_summary')?.content?.data_type || 'general';
+                    storyParams.business_context = `We're analyzing our ${dataType} data to identify opportunities for improvement and optimize our business strategy.`;
+                    
+                    // Set appropriate corporate style based on data type
+                    if (dataType === 'financial') {
+                        storyParams.corporate_style = 'finance';
+                    } else if (dataType === 'marketing') {
+                        storyParams.corporate_style = 'marketing';
+                    } else if (dataType === 'operations') {
+                        storyParams.corporate_style = 'operations';
+                    }
+                };
+
+                const generateStory = async () => {
+                    generatingStory.value = true;
+                    try {
+                        const response = await fetch(`/generate-story/${sessionId.value}`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(storyParams)
+                        });
+
+                        if (!response.ok) {
+                            const error = await response.json();
+                            throw new Error(error.detail || 'Error generating story');
+                        }
+
+                        const data = await response.json();
+                        storyPreview.value = data.preview;
+                        pdfUrl.value = data.pdf_url;
+                    } catch (error) {
+                        alert('Error generating story: ' + error.message);
+                    } finally {
+                        generatingStory.value = false;
+                    }
+                };
+
+                const formatNumber = (num) => {
+                    if (num === null || num === undefined) return 'N/A';
+                    
+                    // Check if it's a very small number
+                    if (Math.abs(num) < 0.01 && num !== 0) {
+                        return num.toExponential(2);
+                    }
+                    
+                    // Check if it's a whole number
+                    if (Number.isInteger(num)) {
+                        return num.toLocaleString();
+                    }
+                    
+                    // Otherwise format with 2 decimal places
+                    return num.toLocaleString(undefined, { 
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
+                };
+
+                const formatMarkdown = (markdown) => {
+                    return marked.parse(markdown);
+                };
+
+                return {
+                    steps,
+                    currentStep,
+                    fileInput,
+                    isDragging,
+                    isUploading,
+                    uploadError,
+                    sessionId,
+                    fileName,
+                    columns,
+                    previewData,
+                    rowCount,
+                    isAnalyzing,
+                    insights,
+                    visualizations,
+                    recommendations,
+                    keyMetrics,
+                    growthTrends,
+                    outliers,
+                    segmentComparison,
+                    corporateStyles,
+                    storyParams,
+                    generatingStory,
+                    storyPreview,
+                    pdfUrl,
+                    triggerFileInput,
+                    onFileDrop,
+                    onFileChange,
+                    startAnalysis,
+                    goToStoryGeneration,
+                    generateStory,
+                    formatNumber,
+                    formatMarkdown
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

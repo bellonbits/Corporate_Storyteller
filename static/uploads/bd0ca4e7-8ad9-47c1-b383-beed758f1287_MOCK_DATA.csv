@@ -1,0 +1,1001 @@
+salesperson_id,sales_value,sales_date,sales_region,sales_channel,sales_quantity,customer_name,customer_email,customer_country
+1,8351.96,10/6/2021,South America,Distributor,453,Ignatius Hassey,ihassey0@wunderground.com,Japan
+2,641.68,3/17/2021,North America,Direct sales,20,Elane Caffin,ecaffin1@wisc.edu,Indonesia
+3,1137.18,4/17/2021,Africa,Direct sales,183,Jill Mandre,jmandre2@psu.edu,France
+4,7286.22,1/24/2021,South America,Distributor,197,Chandal Westphalen,cwestphalen3@microsoft.com,China
+5,3114.97,1/26/2021,Europe,In-store,474,Shepherd Daoust,sdaoust4@plala.or.jp,Ukraine
+6,5431.65,2/12/2021,North America,In-store,470,Shannon Pudge,spudge5@booking.com,China
+7,5344.48,4/3/2021,Europe,Direct sales,75,Whit Paulillo,wpaulillo6@unc.edu,Finland
+8,1123.74,8/9/2021,Africa,Direct sales,214,Becki Parzis,bparzis7@sitemeter.com,Mexico
+9,6576.01,5/22/2021,Africa,Direct sales,922,Lexine Brent,lbrent8@wikia.com,China
+10,5797.31,6/13/2021,North America,Direct sales,569,Mellie Basilotta,mbasilotta9@tinypic.com,China
+11,7190.57,2/24/2021,North America,Online,962,Torey Halle,thallea@foxnews.com,United States
+12,5927.94,8/26/2021,Europe,In-store,408,Tanitansy Seeks,tseeksb@comsenz.com,Philippines
+13,1723.13,7/25/2021,Europe,In-store,622,Madison Fiddyment,mfiddymentc@hibu.com,China
+14,52.85,11/20/2021,South America,Online,933,Mohammed Grimstead,mgrimsteadd@nyu.edu,Thailand
+15,8101.08,8/17/2021,Europe,Direct sales,155,Frederic Paddick,fpaddicke@timesonline.co.uk,Brazil
+16,5647.73,7/24/2021,Europe,In-store,808,Kenton Crowcombe,kcrowcombef@ow.ly,Poland
+17,4085.43,5/7/2021,Asia,Distributor,758,Aguste Burke,aburkeg@bizjournals.com,China
+18,4579.64,11/18/2021,South America,In-store,146,Eula Vondrak,evondrakh@clickbank.net,Mexico
+19,2421.6,5/15/2021,Europe,Distributor,294,Hashim Romayne,hromaynei@domainmarket.com,South Africa
+20,9214.09,7/17/2021,Africa,In-store,50,Anna-maria McDaid,amcdaidj@ihg.com,Indonesia
+21,8508.11,8/20/2021,Europe,Direct sales,995,Alic Buchan,abuchank@ted.com,China
+22,2654.16,2/6/2021,Europe,Online,595,Tessy Swafield,tswafieldl@hexun.com,Japan
+23,8485.39,10/23/2021,South America,Direct sales,629,Valencia Burtt,vburttm@vkontakte.ru,Greece
+24,5320.7,5/12/2021,South America,Direct sales,248,Trina Jiricka,tjirickan@imgur.com,Poland
+25,3027.48,3/6/2021,Europe,Online,111,Antony Whittall,awhittallo@examiner.com,Sri Lanka
+26,1224.5,1/17/2021,North America,In-store,155,Aime Toye,atoyep@answers.com,Poland
+27,1669.25,9/30/2021,South America,Distributor,557,Vern Scarre,vscarreq@google.de,Bulgaria
+28,5712.31,11/30/2021,South America,Direct sales,676,Blanche Fossett,bfossettr@yelp.com,Armenia
+29,5980.45,11/5/2021,South America,Distributor,407,Wayland Wilkowski,wwilkowskis@scribd.com,Philippines
+30,5595.18,1/24/2021,North America,Online,55,Lorens Brugman,lbrugmant@who.int,Indonesia
+31,8812.65,4/30/2021,Europe,Direct sales,5,Roana Valett,rvalettu@unicef.org,France
+32,4439.64,6/1/2021,Africa,Direct sales,989,Rowney Elcott,relcottv@blinklist.com,China
+33,5778.4,11/7/2021,Africa,Distributor,158,Manya Mattessen,mmattessenw@skyrock.com,Colombia
+34,789.02,4/29/2021,Africa,Online,66,Nevsa Trunkfield,ntrunkfieldx@bizjournals.com,Brazil
+35,9156.28,2/19/2021,South America,In-store,15,Donalt Gunbie,dgunbiey@nyu.edu,Philippines
+36,6860.17,5/7/2021,Europe,Online,849,Shaylyn Baker,sbakerz@oaic.gov.au,Canada
+37,7484.86,1/15/2021,North America,Online,684,Darnell Logg,dlogg10@de.vu,Costa Rica
+38,5860.89,9/25/2021,Europe,Distributor,609,Jacinthe Newgrosh,jnewgrosh11@1und1.de,Portugal
+39,7078.07,3/11/2021,Asia,In-store,133,Ailina Kerwen,akerwen12@hatena.ne.jp,Indonesia
+40,3005.16,12/4/2021,Europe,Online,763,Olivero Sutehall,osutehall13@github.io,Indonesia
+41,2351.3,8/7/2021,Europe,Distributor,115,Vergil Bwy,vbwy14@tripod.com,Uganda
+42,1158.59,10/28/2021,North America,Distributor,234,Bernardina Vischi,bvischi15@twitpic.com,Nicaragua
+43,7108.62,10/15/2021,South America,Distributor,846,Jori Guerrin,jguerrin16@hostgator.com,Uganda
+44,6130.87,1/21/2021,Asia,Direct sales,656,Sayer Trusty,strusty17@economist.com,Sweden
+45,5039.45,7/1/2021,Africa,Direct sales,507,Cele Westlake,cwestlake18@oaic.gov.au,Philippines
+46,1783.42,5/21/2021,South America,Direct sales,579,Wallas Holyland,wholyland19@wisc.edu,China
+47,4907.83,7/27/2021,Europe,Distributor,239,Sully Aries,saries1a@slashdot.org,United Kingdom
+48,4578.49,9/5/2021,Asia,Online,516,Ava Houldcroft,ahouldcroft1b@woothemes.com,Brazil
+49,4755.69,1/7/2021,Africa,Distributor,60,Karlotte Pennyman,kpennyman1c@google.ca,Indonesia
+50,9673.3,8/23/2021,South America,Direct sales,128,Traver Longland,tlongland1d@booking.com,China
+51,352.6,11/15/2021,Africa,Online,493,Gleda Ralphs,gralphs1e@mapy.cz,China
+52,9929.79,11/5/2021,Africa,Direct sales,146,Cristabel Stute,cstute1f@huffingtonpost.com,Indonesia
+53,3891.89,7/25/2021,Europe,Direct sales,253,Egon Dormon,edormon1g@blogspot.com,China
+54,4505.64,6/3/2021,North America,Distributor,666,Sharon Stoggles,sstoggles1h@nytimes.com,China
+55,7390.56,1/19/2021,South America,Distributor,564,Florian Tripp,ftripp1i@hhs.gov,China
+56,378.41,5/17/2021,South America,In-store,452,Flem Campaigne,fcampaigne1j@vistaprint.com,Russia
+57,7281.19,10/31/2021,Asia,Online,265,Guillemette Orys,gorys1k@craigslist.org,Vietnam
+58,6588.18,8/11/2021,Africa,Direct sales,183,Rafe Higgoe,rhiggoe1l@bbc.co.uk,Indonesia
+59,3988.15,10/15/2021,Africa,In-store,817,Kalie Seed,kseed1m@etsy.com,Greece
+60,2074.13,4/12/2021,North America,In-store,567,Gates Trustram,gtrustram1n@hostgator.com,Philippines
+61,5769.49,4/4/2021,South America,Direct sales,459,Yetta Llewelly,yllewelly1o@tinypic.com,Mexico
+62,4575.71,3/30/2021,North America,Direct sales,887,Misti Copping,mcopping1p@si.edu,Mexico
+63,9758.37,5/10/2021,South America,Distributor,42,Barnebas Kensitt,bkensitt1q@yale.edu,Dominica
+64,1168.76,3/25/2021,Africa,Distributor,759,Darice Postan,dpostan1r@indiatimes.com,Canada
+65,5495.02,11/5/2021,Africa,Online,663,Morgen Brumby,mbrumby1s@simplemachines.org,Indonesia
+66,5919.16,5/16/2021,North America,Distributor,820,Catrina Casin,ccasin1t@123-reg.co.uk,Indonesia
+67,9920.26,8/1/2021,Europe,Direct sales,718,Stearne Starte,sstarte1u@uiuc.edu,Costa Rica
+68,5712.45,4/9/2021,South America,Direct sales,930,Gabbi Iseton,giseton1v@de.vu,Chile
+69,9595.02,6/7/2021,Europe,Direct sales,488,Danika Fairs,dfairs1w@abc.net.au,Uzbekistan
+70,3558.13,2/17/2021,Asia,Direct sales,985,Care Braunton,cbraunton1x@multiply.com,China
+71,8573.41,6/28/2021,Africa,Direct sales,719,Garrott Shoebottom,gshoebottom1y@mediafire.com,China
+72,2854.71,7/2/2021,South America,Online,392,Vern Weavers,vweavers1z@google.com,Indonesia
+73,9132.43,5/16/2021,Europe,In-store,824,Avril McAirt,amcairt20@photobucket.com,Russia
+74,1943.27,5/7/2021,Asia,In-store,204,Frieda Tomasz,ftomasz21@example.com,Indonesia
+75,5684.66,7/17/2021,South America,Distributor,825,Ode Pettegre,opettegre22@cdc.gov,Armenia
+76,6608.83,8/29/2021,South America,Online,911,Glennis Chappell,gchappell23@nps.gov,Canada
+77,8634.44,6/20/2021,Europe,Online,459,Jonie Buglass,jbuglass24@ning.com,Indonesia
+78,2492.56,1/14/2021,Asia,Distributor,256,Melba Heinsius,mheinsius25@hatena.ne.jp,Poland
+79,9167.81,4/13/2021,Asia,In-store,569,Prescott Rhys,prhys26@liveinternet.ru,Brazil
+80,3243.27,6/11/2021,Africa,Online,139,Clary Pottage,cpottage27@multiply.com,Egypt
+81,622.38,2/19/2021,North America,Online,771,Morton O'Hallagan,mohallagan28@cisco.com,Botswana
+82,5197.97,8/26/2021,Asia,In-store,118,Muhammad Espasa,mespasa29@sphinn.com,China
+83,4038.51,10/6/2021,Asia,Distributor,140,Godiva Garrad,ggarrad2a@nymag.com,China
+84,4723.38,8/10/2021,Europe,Direct sales,786,Llywellyn Kensit,lkensit2b@woothemes.com,Sweden
+85,9243.85,1/14/2021,North America,Online,518,Dix Dulson,ddulson2c@ucsd.edu,Nepal
+86,1026.33,3/19/2021,South America,Direct sales,145,Rodolphe Caccavella,rcaccavella2d@yale.edu,China
+87,7646.3,2/7/2021,Asia,Distributor,292,Ginger Burgot,gburgot2e@behance.net,Poland
+88,4400.91,4/5/2021,North America,Direct sales,783,Arabella Goudy,agoudy2f@tinypic.com,South Sudan
+89,5565.35,2/22/2021,South America,In-store,482,Penelopa Bagnall,pbagnall2g@examiner.com,China
+90,4045.55,2/21/2021,South America,Online,184,Laura Upham,lupham2h@columbia.edu,China
+91,2651.35,7/23/2021,North America,Distributor,651,Annora Stoppard,astoppard2i@sciencedirect.com,Finland
+92,4746.58,12/10/2021,Africa,In-store,268,Berri Benzie,bbenzie2j@vistaprint.com,Russia
+93,5041.08,4/17/2021,North America,Distributor,28,Julie Ivamy,jivamy2k@google.com.au,Russia
+94,7963.79,12/14/2021,Africa,Online,18,Dorey Tomaselli,dtomaselli2l@amazonaws.com,Russia
+95,41.24,7/25/2021,Asia,In-store,898,Fayina Lucy,flucy2m@jugem.jp,Mozambique
+96,5285.9,5/5/2021,Europe,In-store,645,Tine Touson,ttouson2n@creativecommons.org,Finland
+97,2404.15,5/23/2021,Europe,Direct sales,342,Alonzo Stormouth,astormouth2o@google.cn,Bahamas
+98,4893.43,5/29/2021,Europe,In-store,76,Kiley Gatrell,kgatrell2p@blog.com,Malaysia
+99,8437.2,12/9/2021,South America,Online,511,Alysa Constantine,aconstantine2q@thetimes.co.uk,China
+100,7696.5,1/20/2021,Africa,Distributor,380,Kalle Clayson,kclayson2r@ucla.edu,Indonesia
+101,7979.82,12/24/2021,South America,Direct sales,484,Vinnie Rand,vrand2s@si.edu,Greece
+102,3165.85,4/15/2021,Europe,Distributor,482,Merna Ayton,mayton2t@cbsnews.com,China
+103,6453.89,5/18/2021,Asia,Distributor,95,Katine Bushel,kbushel2u@skyrock.com,Poland
+104,9239.76,2/16/2021,Europe,Direct sales,838,Gayla Shales,gshales2v@uol.com.br,Canada
+105,7707.6,11/1/2021,South America,Direct sales,705,Kylynn Etienne,ketienne2w@ocn.ne.jp,United States
+106,1401.17,3/26/2021,Asia,Online,798,Ike Rollo,irollo2x@loc.gov,Japan
+107,4988.78,12/28/2021,North America,Distributor,380,Dell Conaghan,dconaghan2y@pcworld.com,France
+108,7876.8,10/1/2021,Europe,In-store,1000,Guy Rumin,grumin2z@ow.ly,Chile
+109,5303.71,12/22/2021,North America,Online,425,Carey Tice,ctice30@blinklist.com,China
+110,2110.15,7/7/2021,South America,Online,453,Shane Schooley,sschooley31@pbs.org,Afghanistan
+111,1945.83,8/6/2021,South America,Online,358,Charmion Connah,cconnah32@dailymotion.com,China
+112,9778.87,5/6/2021,North America,Distributor,852,Rosalia Berntsson,rberntsson33@dailymotion.com,Sweden
+113,2956.95,6/6/2021,Africa,Direct sales,700,Adan Phayre,aphayre34@1und1.de,Ukraine
+114,909.25,8/3/2021,Europe,In-store,309,Dottie Cartmel,dcartmel35@google.co.uk,Brazil
+115,7070.37,2/20/2021,Asia,In-store,769,Annadiana Scherer,ascherer36@amazon.de,Philippines
+116,7440.83,11/1/2021,South America,Direct sales,841,Consolata Mixter,cmixter37@timesonline.co.uk,China
+117,9023.38,9/5/2021,Africa,Online,311,Loralie Tolle,ltolle38@engadget.com,Syria
+118,837.43,1/7/2021,South America,Direct sales,347,Jozef Colgan,jcolgan39@abc.net.au,Russia
+119,7116.4,7/4/2021,Europe,Distributor,695,Edy Osanne,eosanne3a@bandcamp.com,China
+120,1582.96,12/23/2021,North America,Direct sales,199,Ruth Devonish,rdevonish3b@etsy.com,Nigeria
+121,5484.75,2/18/2021,Europe,Direct sales,111,Gherardo Harms,gharms3c@youku.com,Ireland
+122,2946.75,4/16/2021,Asia,In-store,733,Shantee Lusted,slusted3d@fc2.com,Netherlands
+123,3824.85,1/2/2021,Africa,Distributor,791,Enid Beeswing,ebeeswing3e@bloglines.com,Russia
+124,5727.17,11/17/2021,South America,Distributor,381,Lauren Occleshaw,loccleshaw3f@360.cn,Portugal
+125,2932.26,1/15/2021,Europe,Direct sales,765,Pierre Lodford,plodford3g@nydailynews.com,Palestinian Territory
+126,8119.97,6/5/2021,South America,Distributor,932,Ardenia Ames,aames3h@typepad.com,Japan
+127,4641.05,5/21/2021,South America,Direct sales,68,Jesus Dalby,jdalby3i@dedecms.com,Portugal
+128,4985.0,8/9/2021,Africa,Distributor,374,Alexandrina Fernandez,afernandez3j@un.org,Kazakhstan
+129,2919.91,6/19/2021,Europe,Online,415,Rudolph Gagg,rgagg3k@homestead.com,Thailand
+130,9609.55,10/17/2021,Asia,Direct sales,144,Jerrold Lesmonde,jlesmonde3l@tumblr.com,Cameroon
+131,3447.77,9/22/2021,South America,Distributor,191,Eberto Delamaine,edelamaine3m@jimdo.com,Canada
+132,9226.82,5/20/2021,South America,Distributor,255,Lloyd Viner,lviner3n@imageshack.us,Brazil
+133,7510.75,5/7/2021,Asia,Direct sales,498,Britni Webborn,bwebborn3o@irs.gov,Portugal
+134,9905.49,9/4/2021,South America,Direct sales,14,Odille Tytcomb,otytcomb3p@shinystat.com,Peru
+135,9844.81,5/10/2021,Asia,Distributor,947,Myrtice Robion,mrobion3q@woothemes.com,Somalia
+136,5250.03,6/22/2021,Europe,Distributor,267,Morrie Masurel,mmasurel3r@mail.ru,China
+137,3761.83,3/9/2021,Europe,Online,412,Wendall Kneebone,wkneebone3s@tinyurl.com,Cyprus
+138,437.55,8/3/2021,North America,In-store,272,Wang Pinson,wpinson3t@delicious.com,Japan
+139,8718.32,2/25/2021,South America,Distributor,416,Loralie Mayoh,lmayoh3u@squarespace.com,Czech Republic
+140,7547.74,3/18/2021,Europe,Distributor,129,Aila Farrent,afarrent3v@sciencedaily.com,Mongolia
+141,9608.97,10/3/2021,North America,Distributor,943,Shirlee McElrea,smcelrea3w@phoca.cz,Bolivia
+142,7843.24,8/31/2021,Asia,In-store,814,Marabel Divisek,mdivisek3x@yellowpages.com,Iran
+143,6956.33,2/14/2021,Africa,Distributor,618,Margaretta Hateley,mhateley3y@unesco.org,China
+144,3158.56,10/29/2021,North America,In-store,845,Aguistin Wathan,awathan3z@businessweek.com,Sweden
+145,5266.7,8/13/2021,Europe,Direct sales,751,Thomasa Van Son,tvan40@ifeng.com,China
+146,3534.85,4/2/2021,Europe,Distributor,328,Genny Rubel,grubel41@goo.gl,Georgia
+147,6733.62,3/7/2021,Asia,In-store,112,Gayler Lordon,glordon42@mac.com,Thailand
+148,3959.57,6/30/2021,North America,Direct sales,663,Anastasia Sawle,asawle43@buzzfeed.com,Indonesia
+149,3766.66,10/10/2021,North America,Direct sales,886,Lane Weir,lweir44@kickstarter.com,China
+150,126.08,2/14/2021,Asia,Direct sales,975,Noella Ramsby,nramsby45@vistaprint.com,Indonesia
+151,7761.25,4/9/2021,Europe,Direct sales,649,Deb Straun,dstraun46@meetup.com,Portugal
+152,6495.58,3/18/2021,Africa,Online,469,Dare Pearce,dpearce47@berkeley.edu,Portugal
+153,1470.46,4/10/2021,Asia,Online,211,Rubetta Staunton,rstaunton48@phoca.cz,China
+154,6548.1,3/14/2021,North America,Direct sales,393,Monti Dinis,mdinis49@alibaba.com,China
+155,441.26,1/14/2021,South America,Distributor,723,Edgardo Souch,esouch4a@newyorker.com,Poland
+156,7057.09,1/27/2021,North America,In-store,860,Neddy Timlin,ntimlin4b@wordpress.org,South Africa
+157,1946.47,11/4/2021,Asia,Distributor,153,Martie Busby,mbusby4c@youtu.be,Poland
+158,5505.89,12/3/2021,Africa,Direct sales,596,Brittany Iglesias,biglesias4d@adobe.com,Myanmar
+159,3521.95,8/26/2021,Africa,Direct sales,528,Raynor Fazan,rfazan4e@virginia.edu,Azerbaijan
+160,4483.57,5/26/2021,North America,Distributor,470,Viv Ivery,vivery4f@opensource.org,Azerbaijan
+161,7695.67,3/15/2021,North America,Online,661,Margareta Bonome,mbonome4g@rakuten.co.jp,China
+162,6681.11,7/16/2021,Asia,In-store,705,Ario Beevors,abeevors4h@newsvine.com,Paraguay
+163,5602.74,1/27/2021,Africa,Online,827,Dorrie Flay,dflay4i@angelfire.com,China
+164,1585.34,3/27/2021,Africa,Online,140,Johnnie Hertwell,jhertwell4j@artisteer.com,China
+165,5297.82,6/5/2021,Asia,Online,514,Kerrie Doddrell,kdoddrell4k@baidu.com,Japan
+166,8835.8,9/22/2021,Africa,Direct sales,132,Bobinette Casin,bcasin4l@ifeng.com,Philippines
+167,8032.28,4/13/2021,South America,In-store,105,Becki Keggin,bkeggin4m@technorati.com,China
+168,3340.83,6/2/2021,Europe,Online,462,Robinet Fullerd,rfullerd4n@facebook.com,China
+169,7801.74,10/27/2021,Europe,Direct sales,641,Esme Jodkowski,ejodkowski4o@umn.edu,United States
+170,7944.94,8/16/2021,Africa,Distributor,793,Mira Mablestone,mmablestone4p@cnbc.com,Brazil
+171,7105.03,10/3/2021,Asia,Online,298,Ludovika Caulcott,lcaulcott4q@aboutads.info,China
+172,157.37,6/25/2021,Europe,In-store,867,Dotty De Brett,dde4r@chron.com,Guatemala
+173,7068.36,11/2/2021,South America,Online,121,Sergei Goodier,sgoodier4s@unicef.org,China
+174,3332.25,6/30/2021,Africa,Distributor,278,Nolana Oakenfull,noakenfull4t@fda.gov,Poland
+175,8305.9,1/26/2021,South America,Distributor,184,Shela Bour,sbour4u@canalblog.com,Nicaragua
+176,8391.06,4/22/2021,Europe,In-store,9,Axel Cure,acure4v@wiley.com,Yemen
+177,6226.27,11/16/2021,Asia,In-store,51,Wandie Heibl,wheibl4w@salon.com,Poland
+178,2904.2,2/10/2021,Europe,In-store,912,Halli Benjafield,hbenjafield4x@pcworld.com,China
+179,2866.29,4/23/2021,North America,In-store,183,Kip Whilde,kwhilde4y@posterous.com,Philippines
+180,9810.12,6/25/2021,Asia,Online,797,Rafaelia Ludovico,rludovico4z@godaddy.com,China
+181,4579.47,2/9/2021,South America,Distributor,816,Salomo Fincham,sfincham50@marketwatch.com,Norway
+182,6575.5,9/10/2021,Europe,Direct sales,952,Antonia Barlass,abarlass51@dedecms.com,China
+183,8967.18,6/11/2021,North America,In-store,324,Donia Tebb,dtebb52@usatoday.com,Syria
+184,5650.59,6/13/2021,South America,In-store,638,Bartie Goodredge,bgoodredge53@japanpost.jp,United States
+185,1904.45,5/7/2021,North America,In-store,227,Cordie Galbreath,cgalbreath54@kickstarter.com,Zimbabwe
+186,5892.37,4/4/2021,Asia,Online,884,Clemmie Lisamore,clisamore55@webs.com,Portugal
+187,6900.61,4/30/2021,Asia,Online,786,Winifred Balmforth,wbalmforth56@forbes.com,Russia
+188,6420.83,2/13/2021,South America,In-store,788,Faber Dainty,fdainty57@aboutads.info,Indonesia
+189,3676.7,11/11/2021,South America,Distributor,34,Louisa Chasney,lchasney58@addthis.com,Yemen
+190,1188.57,12/28/2021,South America,Distributor,503,Angele Wickes,awickes59@cbc.ca,Russia
+191,5368.28,4/4/2021,Africa,Direct sales,504,Alex Mantha,amantha5a@tuttocitta.it,Czech Republic
+192,3148.49,8/30/2021,South America,In-store,638,Layla Thornbarrow,lthornbarrow5b@fotki.com,Mongolia
+193,4017.6,3/10/2021,South America,In-store,995,Lita Tredget,ltredget5c@angelfire.com,Tanzania
+194,5388.83,2/27/2021,Europe,Online,7,Ozzy Longson,olongson5d@ehow.com,Colombia
+195,520.46,11/25/2021,Europe,Online,414,Yovonnda Defrain,ydefrain5e@dagondesign.com,Indonesia
+196,6741.18,5/11/2021,Europe,Online,951,Blondy Woodfine,bwoodfine5f@networksolutions.com,Ireland
+197,6701.2,2/24/2021,Europe,Direct sales,677,Tadeas Crosdill,tcrosdill5g@apache.org,Papua New Guinea
+198,655.95,4/1/2021,Africa,In-store,988,Hersch Gummie,hgummie5h@latimes.com,Ivory Coast
+199,5415.96,11/1/2021,Europe,Online,709,Sarge Bernardotte,sbernardotte5i@archive.org,China
+200,5061.81,4/14/2021,Europe,Distributor,988,Leigh Iston,liston5j@usa.gov,China
+201,9135.33,7/2/2021,North America,In-store,372,Gordy Tomaszek,gtomaszek5k@vkontakte.ru,Serbia
+202,8980.9,6/22/2021,Europe,Direct sales,151,Marrissa Dorrins,mdorrins5l@free.fr,China
+203,7.51,12/11/2021,North America,Distributor,386,Doll MacSkeagan,dmacskeagan5m@loc.gov,Armenia
+204,3439.07,2/23/2021,Asia,Direct sales,980,Victoir Clausner,vclausner5n@whitehouse.gov,Tunisia
+205,7478.99,5/30/2021,Asia,In-store,972,Hakeem Crotty,hcrotty5o@latimes.com,China
+206,3525.92,3/5/2021,Africa,Direct sales,646,Tessi McNeilly,tmcneilly5p@nymag.com,China
+207,750.66,11/6/2021,North America,Online,72,Diann Funcheon,dfuncheon5q@google.com.au,China
+208,661.46,8/8/2021,Africa,Direct sales,277,Blakelee Dyett,bdyett5r@creativecommons.org,China
+209,3544.25,7/30/2021,North America,Direct sales,385,Suki Beaglehole,sbeaglehole5s@archive.org,Indonesia
+210,3479.73,12/6/2021,South America,Direct sales,981,Ellene Hagstone,ehagstone5t@usda.gov,Poland
+211,4797.93,9/7/2021,Africa,In-store,394,Blinny Verralls,bverralls5u@latimes.com,France
+212,5531.39,1/21/2021,Europe,Online,56,Freeman Ciccottini,fciccottini5v@weibo.com,Indonesia
+213,7502.49,2/28/2021,South America,Online,301,Stafford Chaize,schaize5w@irs.gov,China
+214,1388.96,9/10/2021,North America,In-store,670,Lyndel Drury,ldrury5x@4shared.com,Colombia
+215,7697.33,9/30/2021,Africa,Direct sales,371,Mozes Chatten,mchatten5y@joomla.org,Angola
+216,7860.71,5/20/2021,Asia,Online,174,Ketti De Malchar,kde5z@discuz.net,China
+217,1405.7,7/22/2021,Europe,In-store,213,Angy Starzaker,astarzaker60@alibaba.com,Indonesia
+218,2003.33,11/29/2021,Africa,In-store,850,Tyne Lattos,tlattos61@paginegialle.it,Sweden
+219,8085.36,9/16/2021,Asia,Direct sales,372,Jeremiah Gronaller,jgronaller62@bloglovin.com,Mongolia
+220,3287.59,10/11/2021,North America,Direct sales,104,Melosa Guildford,mguildford63@plala.or.jp,Mexico
+221,7703.7,7/30/2021,South America,In-store,982,Jeannie Tarver,jtarver64@tumblr.com,China
+222,1688.43,12/13/2021,Europe,Direct sales,981,Selena Scarth,sscarth65@geocities.jp,France
+223,9274.8,6/8/2021,South America,Distributor,531,Ron Fairburn,rfairburn66@over-blog.com,China
+224,1839.91,9/15/2021,South America,Direct sales,304,Janis Kaye,jkaye67@mozilla.org,United States
+225,5848.1,1/14/2021,North America,Online,4,Vern Olive,volive68@stanford.edu,Syria
+226,171.93,10/26/2021,Africa,In-store,351,Katharyn Raiston,kraiston69@alexa.com,Argentina
+227,1742.54,11/22/2021,Africa,In-store,294,Paulie Sterrie,psterrie6a@yellowpages.com,China
+228,3164.93,5/24/2021,South America,In-store,510,Anallise Josefsohn,ajosefsohn6b@cdc.gov,Philippines
+229,402.88,5/6/2021,North America,In-store,14,Hinze Baglan,hbaglan6c@deliciousdays.com,Brazil
+230,3936.21,8/12/2021,Asia,Online,89,Merrile Messier,mmessier6d@samsung.com,Czech Republic
+231,9973.55,6/23/2021,South America,Online,441,Anthe McTeggart,amcteggart6e@twitpic.com,Brazil
+232,2635.12,9/11/2021,South America,Direct sales,20,Gennifer Snasdell,gsnasdell6f@opera.com,Croatia
+233,6676.72,2/16/2021,North America,Direct sales,481,Muriel Collisson,mcollisson6g@nbcnews.com,Poland
+234,9703.45,2/15/2021,South America,Online,65,Lissy Prinnett,lprinnett6h@mail.ru,China
+235,6381.12,10/3/2021,North America,Distributor,27,Kent Ayrs,kayrs6i@spiegel.de,Thailand
+236,4178.33,8/16/2021,Asia,Distributor,753,Eddy Nise,enise6j@wired.com,Indonesia
+237,9708.75,12/17/2021,South America,Distributor,108,Jone Tobias,jtobias6k@ocn.ne.jp,Brazil
+238,3444.35,1/24/2021,North America,Distributor,169,Ezechiel Huskinson,ehuskinson6l@taobao.com,Sweden
+239,7315.35,6/22/2021,Africa,In-store,392,Tybie Coal,tcoal6m@nationalgeographic.com,Philippines
+240,5173.98,6/20/2021,Europe,Direct sales,241,Alexis Peele,apeele6n@netscape.com,Sweden
+241,3128.16,8/28/2021,Europe,Online,197,Kerstin Shervil,kshervil6o@ed.gov,Russia
+242,6290.53,11/2/2021,South America,In-store,971,Eudora MacLaig,emaclaig6p@tuttocitta.it,Indonesia
+243,248.17,11/9/2021,Asia,Online,57,Margeaux O Mullen,mo6q@phpbb.com,United States
+244,7110.18,9/12/2021,South America,In-store,119,Wesley Seeman,wseeman6r@irs.gov,Chile
+245,6244.29,5/5/2021,South America,Distributor,315,Crissie Turnbull,cturnbull6s@newyorker.com,Indonesia
+246,254.3,9/13/2021,Africa,In-store,182,Joannes Blacklawe,jblacklawe6t@cbslocal.com,Philippines
+247,1594.59,5/3/2021,Europe,Online,635,Tann Finnan,tfinnan6u@ibm.com,Portugal
+248,4646.0,3/12/2021,Europe,Online,689,Forster Goulston,fgoulston6v@printfriendly.com,China
+249,1670.9,11/24/2021,Africa,Online,827,Madlen Royans,mroyans6w@is.gd,Czech Republic
+250,5146.9,2/23/2021,North America,In-store,107,Marj Tiddeman,mtiddeman6x@about.me,Czech Republic
+251,3793.48,11/13/2021,Asia,Distributor,949,Persis Hildrew,phildrew6y@sakura.ne.jp,China
+252,636.0,6/3/2021,South America,Online,121,Adrian Hutchason,ahutchason6z@altervista.org,Mexico
+253,2461.09,4/6/2021,North America,Direct sales,499,Agosto Baruch,abaruch70@mediafire.com,Bosnia and Herzegovina
+254,6921.62,9/18/2021,Asia,Distributor,549,Kilian Bernadon,kbernadon71@nbcnews.com,Malaysia
+255,3679.32,2/15/2021,Europe,In-store,542,Joleen McKinna,jmckinna72@goodreads.com,France
+256,6377.62,1/30/2021,North America,Direct sales,546,Lorettalorna Hawk,lhawk73@ow.ly,Sweden
+257,473.34,9/22/2021,Asia,Direct sales,495,Raff Duligall,rduligall74@archive.org,Czech Republic
+258,7816.71,8/29/2021,Europe,Direct sales,305,Raymond Bjerkan,rbjerkan75@g.co,Sweden
+259,4325.26,9/9/2021,Asia,Distributor,627,Sollie Enrigo,senrigo76@dailymotion.com,China
+260,4383.25,2/22/2021,North America,Online,199,Tammara Swain,tswain77@amazon.co.uk,France
+261,7776.5,5/12/2021,Asia,In-store,856,Baxie Bagehot,bbagehot78@w3.org,Japan
+262,6488.56,5/18/2021,Asia,Distributor,163,Bordy Tozer,btozer79@businessinsider.com,China
+263,7001.26,6/10/2021,Africa,In-store,332,Rickie Gainsbury,rgainsbury7a@utexas.edu,China
+264,831.15,3/11/2021,Asia,Direct sales,882,Roddy Normanton,rnormanton7b@marketwatch.com,United States
+265,2305.03,9/23/2021,South America,Online,128,Alvis Sandey,asandey7c@aol.com,China
+266,162.85,2/10/2021,South America,Direct sales,341,Gorden McRae,gmcrae7d@mapquest.com,China
+267,3450.82,4/28/2021,Africa,In-store,596,Shirlene Staries,sstaries7e@accuweather.com,Armenia
+268,5020.87,9/1/2021,North America,In-store,813,Trace Melloi,tmelloi7f@fastcompany.com,Philippines
+269,6965.07,1/16/2021,Asia,In-store,358,Toma Brevitt,tbrevitt7g@booking.com,China
+270,7617.74,8/12/2021,Europe,Online,953,Feodor Masurel,fmasurel7h@wix.com,Chad
+271,7599.2,6/2/2021,North America,Direct sales,735,Tye Hunte,thunte7i@imdb.com,Sweden
+272,8932.0,4/5/2021,Asia,Direct sales,236,Katheryn Pettegre,kpettegre7j@ocn.ne.jp,Brazil
+273,5136.07,3/18/2021,North America,Distributor,84,Valentijn Sturton,vsturton7k@amazon.com,Senegal
+274,4293.91,7/19/2021,Asia,Online,505,Dani Sharpe,dsharpe7l@ucla.edu,Philippines
+275,3616.12,2/20/2021,Europe,Distributor,406,Doy Edens,dedens7m@businessinsider.com,Greece
+276,3067.89,12/25/2021,North America,In-store,188,Jude Itzkovwitch,jitzkovwitch7n@sbwire.com,Ivory Coast
+277,9102.88,9/22/2021,Europe,Direct sales,444,Moore Blethyn,mblethyn7o@tinypic.com,Indonesia
+278,9794.08,9/24/2021,South America,Distributor,67,Dorree Elliot,delliot7p@hatena.ne.jp,China
+279,6881.23,4/3/2021,South America,Distributor,678,Mark Boothroyd,mboothroyd7q@t-online.de,China
+280,1976.19,7/3/2021,North America,Distributor,733,Ermin Judkins,ejudkins7r@marriott.com,Sweden
+281,6179.11,5/23/2021,North America,Online,867,Halie Dulwitch,hdulwitch7s@pagesperso-orange.fr,Indonesia
+282,6342.02,6/25/2021,Africa,In-store,813,Torrey Chaulk,tchaulk7t@boston.com,Russia
+283,209.07,4/12/2021,Africa,Distributor,276,Aeriel Stoller,astoller7u@shinystat.com,China
+284,7320.48,8/10/2021,Africa,Online,462,Wes Garnsey,wgarnsey7v@jalbum.net,Philippines
+285,7813.53,7/27/2021,North America,In-store,488,Peder Pittet,ppittet7w@bbb.org,China
+286,2148.98,9/30/2021,Asia,Direct sales,834,Silvie Sally,ssally7x@berkeley.edu,Sweden
+287,764.63,6/7/2021,Africa,Distributor,132,Alain Castillou,acastillou7y@wisc.edu,Philippines
+288,534.81,9/4/2021,South America,Online,5,Tasia McCandie,tmccandie7z@cloudflare.com,Portugal
+289,8289.79,9/1/2021,Europe,Online,943,Oliviero Duferie,oduferie80@weather.com,Tanzania
+290,1869.96,11/19/2021,Africa,Online,188,Estele Bamell,ebamell81@multiply.com,Iran
+291,4275.63,3/30/2021,North America,In-store,175,Verile Spurdon,vspurdon82@springer.com,China
+292,454.68,11/27/2021,Asia,Direct sales,540,Karie Bachellier,kbachellier83@ucoz.com,Indonesia
+293,1987.95,4/20/2021,Europe,Distributor,759,Noel Neale,nneale84@networkadvertising.org,China
+294,5335.27,8/22/2021,Europe,Online,494,Cesaro Dummett,cdummett85@yelp.com,China
+295,5571.35,9/7/2021,Africa,Online,672,Gage Mabbitt,gmabbitt86@noaa.gov,Brazil
+296,4727.37,11/17/2021,Europe,Direct sales,775,Hester Potell,hpotell87@timesonline.co.uk,Croatia
+297,2312.79,12/21/2021,Africa,In-store,32,Nehemiah Rayman,nrayman88@domainmarket.com,Vietnam
+298,2895.9,4/11/2021,North America,In-store,118,Esther Jillett,ejillett89@edublogs.org,Poland
+299,8196.03,1/10/2021,North America,Direct sales,689,Anna-diane Kenford,akenford8a@scribd.com,United States
+300,3245.08,8/24/2021,North America,In-store,549,Samantha Brummell,sbrummell8b@comcast.net,Colombia
+301,3398.48,5/23/2021,North America,Distributor,44,Lauren Godard,lgodard8c@hc360.com,Brazil
+302,2785.82,5/1/2021,Africa,Online,267,Rutledge Druce,rdruce8d@dailymotion.com,France
+303,6842.71,8/26/2021,Asia,Direct sales,66,Hanson Hartlebury,hhartlebury8e@nih.gov,Ukraine
+304,9143.93,9/1/2021,North America,Direct sales,535,Cayla Trimmill,ctrimmill8f@yolasite.com,China
+305,7565.98,7/16/2021,Africa,Online,268,Jillane Genn,jgenn8g@hugedomains.com,Mexico
+306,9921.34,5/7/2021,North America,Distributor,509,Mel Jonuzi,mjonuzi8h@tuttocitta.it,China
+307,9100.98,9/8/2021,Europe,Distributor,176,Kele Mabb,kmabb8i@instagram.com,Germany
+308,9782.63,2/22/2021,South America,Direct sales,424,Bartel Harses,bharses8j@1688.com,Sweden
+309,2888.27,10/26/2021,Asia,In-store,956,Jere Cardall,jcardall8k@mapquest.com,Sweden
+310,4259.19,7/6/2021,North America,In-store,478,Dell Miners,dminers8l@a8.net,Switzerland
+311,8404.71,1/23/2021,Asia,Direct sales,791,Felicle Spottiswoode,fspottiswoode8m@uol.com.br,Russia
+312,8072.16,7/15/2021,Africa,Direct sales,48,Kata Paget,kpaget8n@thetimes.co.uk,China
+313,847.52,8/19/2021,South America,Direct sales,62,Helga Thams,hthams8o@t-online.de,Gabon
+314,2274.41,8/23/2021,Europe,Online,631,Andee Snaddon,asnaddon8p@slashdot.org,Ukraine
+315,1827.72,4/21/2021,Europe,Online,26,Eolanda Trayes,etrayes8q@webs.com,France
+316,6711.12,2/27/2021,North America,Online,137,Gawen Wigan,gwigan8r@dagondesign.com,Czech Republic
+317,3235.54,1/6/2021,Europe,In-store,81,Ambrose Arendt,aarendt8s@theatlantic.com,China
+318,5379.14,12/26/2021,Asia,Distributor,308,Carver Dubock,cdubock8t@chron.com,Canada
+319,7924.74,3/6/2021,Europe,Distributor,824,Ransell Arnley,rarnley8u@ustream.tv,Indonesia
+320,3478.86,4/14/2021,Africa,In-store,412,Sharron Lantry,slantry8v@bloomberg.com,Mexico
+321,3732.88,3/26/2021,Europe,Online,840,Marta Delong,mdelong8w@creativecommons.org,Finland
+322,6351.99,10/5/2021,Europe,Direct sales,182,Clarabelle Yvens,cyvens8x@cdc.gov,Indonesia
+323,6.68,4/3/2021,South America,In-store,717,Colan Youens,cyouens8y@msn.com,Brazil
+324,3541.11,10/16/2021,North America,Direct sales,11,Hughie Antoney,hantoney8z@163.com,Philippines
+325,4725.99,8/24/2021,Asia,In-store,103,Harv Itshak,hitshak90@vinaora.com,China
+326,6561.52,8/3/2021,North America,Online,209,Berry Ormiston,bormiston91@ebay.co.uk,Saudi Arabia
+327,9298.74,6/15/2021,Asia,Direct sales,998,Agna Cops,acops92@elegantthemes.com,Portugal
+328,9263.0,8/30/2021,Europe,Online,945,Natka Panas,npanas93@live.com,Syria
+329,6502.48,10/18/2021,North America,Direct sales,744,Lauralee Lockney,llockney94@deviantart.com,Vietnam
+330,6404.8,8/20/2021,Europe,In-store,72,Rossie Lorentzen,rlorentzen95@ft.com,China
+331,4837.05,12/26/2021,South America,Direct sales,99,Karlotta Wardle,kwardle96@cnn.com,Russia
+332,6544.73,7/16/2021,Europe,Direct sales,37,Prentice Bickardike,pbickardike97@gravatar.com,Philippines
+333,3893.93,6/30/2021,Africa,Distributor,832,Brooke Hyndson,bhyndson98@marketwatch.com,Peru
+334,5493.48,8/11/2021,Africa,Distributor,229,Cherye Dericot,cdericot99@statcounter.com,Indonesia
+335,2819.19,11/13/2021,Europe,Online,468,Hildegarde Biesty,hbiesty9a@gravatar.com,Bangladesh
+336,6778.56,6/25/2021,Europe,In-store,87,Janella Ekins,jekins9b@360.cn,Poland
+337,3450.93,1/26/2021,North America,Online,640,Mervin McCracken,mmccracken9c@jiathis.com,Morocco
+338,8503.52,2/8/2021,Asia,Online,361,Sidney Postan,spostan9d@wix.com,Czech Republic
+339,4589.45,9/10/2021,Europe,In-store,726,Felice Layman,flayman9e@printfriendly.com,Papua New Guinea
+340,7028.01,11/24/2021,Europe,Direct sales,211,Teddy McAmish,tmcamish9f@hubpages.com,Brazil
+341,966.21,11/25/2021,North America,Online,880,Renate Gilfillan,rgilfillan9g@behance.net,China
+342,9454.21,4/9/2021,Africa,Distributor,484,Susanetta Burris,sburris9h@flickr.com,Russia
+343,8499.26,8/4/2021,South America,In-store,809,Alan Stickels,astickels9i@latimes.com,Sweden
+344,8280.15,1/15/2021,Africa,Distributor,884,Angelina Bitterton,abitterton9j@wsj.com,Finland
+345,9646.93,1/29/2021,South America,Direct sales,31,Dud Harle,dharle9k@google.com,Albania
+346,3069.0,1/3/2021,Asia,Online,875,Terrell Briddle,tbriddle9l@comcast.net,Philippines
+347,1243.43,5/21/2021,South America,In-store,588,Marissa Ferrant,mferrant9m@github.com,Sweden
+348,3086.18,11/27/2021,Africa,Distributor,188,Gerry Eisikowitch,geisikowitch9n@howstuffworks.com,China
+349,3098.48,8/23/2021,Asia,Distributor,551,Waiter Attwater,wattwater9o@pen.io,China
+350,3514.46,11/24/2021,Africa,Direct sales,541,Powell Blaxton,pblaxton9p@seesaa.net,Mexico
+351,953.65,12/8/2021,North America,Distributor,711,Florenza Aris,faris9q@nyu.edu,Indonesia
+352,1474.96,10/4/2021,Asia,Direct sales,388,Marlee Soanes,msoanes9r@netvibes.com,Colombia
+353,8269.37,9/4/2021,Asia,Direct sales,251,Reina Catterick,rcatterick9s@statcounter.com,Spain
+354,9853.81,2/16/2021,Asia,Distributor,30,Jodie Bampfield,jbampfield9t@youtu.be,Japan
+355,3016.97,1/19/2021,Africa,In-store,575,Petronella Fillimore,pfillimore9u@europa.eu,Indonesia
+356,276.44,6/10/2021,Europe,Direct sales,23,Keeley Duinbleton,kduinbleton9v@bloomberg.com,Vietnam
+357,5787.05,8/27/2021,Europe,Distributor,225,Tilly Drayton,tdrayton9w@ftc.gov,Indonesia
+358,8589.64,7/26/2021,South America,Online,680,Haley Purvey,hpurvey9x@businesswire.com,Indonesia
+359,6887.62,10/2/2021,South America,Online,123,Raphael Quibell,rquibell9y@yellowbook.com,Brazil
+360,8242.2,8/8/2021,Europe,Distributor,996,Luciana Duley,lduley9z@w3.org,Russia
+361,9173.2,6/2/2021,Asia,In-store,318,Pietra Edworthy,pedworthya0@google.com.br,Bulgaria
+362,3393.46,1/18/2021,Africa,Online,834,Sybila Mcasparan,smcasparana1@forbes.com,China
+363,8252.06,12/11/2021,South America,Online,453,Ariella Heatly,aheatlya2@huffingtonpost.com,Thailand
+364,3263.81,4/18/2021,North America,In-store,206,Moshe Ricart,mricarta3@about.com,Czech Republic
+365,4844.36,12/17/2021,North America,Online,632,Frants Chipping,fchippinga4@blogtalkradio.com,China
+366,928.73,1/27/2021,North America,Online,315,Dmitri Winthrop,dwinthropa5@loc.gov,Russia
+367,2510.07,8/1/2021,South America,In-store,968,Daffy Jaume,djaumea6@time.com,China
+368,1778.3,8/20/2021,Asia,Distributor,649,Marion Byass,mbyassa7@delicious.com,Russia
+369,7262.1,9/22/2021,South America,Online,863,Trudie Beccera,tbecceraa8@state.tx.us,Czech Republic
+370,9964.72,8/15/2021,Europe,Direct sales,389,Darb Bidgod,dbidgoda9@ow.ly,Kosovo
+371,8434.06,3/12/2021,North America,In-store,595,Daffy Melliard,dmelliardaa@imgur.com,Russia
+372,2768.01,1/27/2021,Asia,In-store,347,Jennifer Geraldini,jgeraldiniab@marriott.com,Canada
+373,7079.96,3/23/2021,Asia,In-store,593,Farica Hall-Gough,fhallgoughac@stumbleupon.com,Indonesia
+374,4621.12,9/25/2021,North America,Online,933,Velvet Balston,vbalstonad@nymag.com,France
+375,4317.37,6/3/2021,Africa,Direct sales,440,Ulises Sangster,usangsterae@wired.com,China
+376,9174.78,9/7/2021,North America,Direct sales,150,Thelma MacGauhy,tmacgauhyaf@blog.com,Brazil
+377,269.48,5/31/2021,Europe,Distributor,892,Aksel Wilcox,awilcoxag@shop-pro.jp,Russia
+378,8499.88,3/27/2021,Africa,Direct sales,143,Hubert Asple,haspleah@simplemachines.org,Ukraine
+379,261.24,12/21/2021,South America,Distributor,913,Gilbertina Summerill,gsummerillai@issuu.com,Czech Republic
+380,1445.18,9/25/2021,North America,In-store,82,Cookie Manktelow,cmanktelowaj@salon.com,China
+381,1217.96,1/12/2021,Europe,In-store,948,Roderick Peare,rpeareak@cmu.edu,Philippines
+382,6023.01,2/17/2021,South America,In-store,309,Wilmer Sant,wsantal@scribd.com,Bulgaria
+383,6044.15,3/23/2021,North America,Online,274,Tasia Jedrychowski,tjedrychowskiam@nhs.uk,El Salvador
+384,731.7,9/2/2021,Asia,Online,1000,Meir Lorden,mlordenan@rediff.com,Cuba
+385,6878.07,4/23/2021,Africa,Online,494,Bird Renackowna,brenackownaao@behance.net,Brazil
+386,4569.98,6/12/2021,Africa,In-store,845,Lindsey Van Salzberger,lvanap@hibu.com,Indonesia
+387,9378.66,2/14/2021,South America,Direct sales,895,Abe Drage,adrageaq@opera.com,China
+388,2539.65,8/28/2021,North America,Distributor,226,Lammond Ashurst,lashurstar@woothemes.com,Poland
+389,4295.16,11/27/2021,Europe,Distributor,428,Maria Smy,msmyas@lulu.com,Greenland
+390,228.9,6/10/2021,Europe,Distributor,6,Livy Alcock,lalcockat@ebay.com,China
+391,2393.01,11/14/2021,Africa,In-store,383,Ashien Vauter,avauterau@berkeley.edu,Indonesia
+392,9398.94,8/8/2021,Asia,Direct sales,661,Rees Grabham,rgrabhamav@posterous.com,Honduras
+393,3795.68,3/18/2021,North America,Online,127,Cthrine Drust,cdrustaw@sciencedaily.com,Poland
+394,2583.23,3/17/2021,North America,In-store,981,Daveta Laraway,dlarawayax@symantec.com,Sweden
+395,7957.67,6/26/2021,South America,Direct sales,377,Kissiah Pinching,kpinchingay@washington.edu,Russia
+396,4308.14,12/10/2021,Asia,Direct sales,436,Nina Mottley,nmottleyaz@adobe.com,Peru
+397,340.33,1/8/2021,North America,Distributor,885,Tori Enden,tendenb0@creativecommons.org,Nigeria
+398,1276.62,3/22/2021,Africa,Direct sales,413,Nobe Burriss,nburrissb1@yolasite.com,France
+399,8692.52,8/27/2021,Europe,Online,289,Orion Wherry,owherryb2@google.ca,Sweden
+400,8352.45,6/30/2021,Europe,Online,383,Dodi Freak,dfreakb3@trellian.com,Madagascar
+401,7627.0,8/20/2021,Asia,In-store,237,Rachael Pottery,rpotteryb4@pagesperso-orange.fr,Poland
+402,9478.14,5/18/2021,North America,Direct sales,4,Gena Duncanson,gduncansonb5@hud.gov,Thailand
+403,2828.92,11/6/2021,South America,In-store,631,Amber Donegan,adoneganb6@vistaprint.com,Indonesia
+404,3385.76,9/26/2021,Europe,Online,560,Dana Cross,dcrossb7@nymag.com,Nicaragua
+405,5009.28,3/26/2021,Europe,Online,815,Elna Olifard,eolifardb8@noaa.gov,Mali
+406,1943.46,3/26/2021,Africa,Online,839,Shayna Sanford,ssanfordb9@weather.com,Russia
+407,6788.39,5/15/2021,Africa,Direct sales,179,Ferdinand Fincken,ffinckenba@last.fm,Ukraine
+408,2895.29,2/15/2021,South America,In-store,858,Hynda Avramovsky,havramovskybb@hhs.gov,China
+409,8161.58,12/29/2021,North America,Direct sales,69,Jule Bartels-Ellis,jbartelsellisbc@i2i.jp,Sweden
+410,8191.92,10/21/2021,Asia,Online,97,Clarey Wevell,cwevellbd@walmart.com,Czech Republic
+411,7884.19,11/30/2021,South America,Distributor,628,Estelle Tafani,etafanibe@pagesperso-orange.fr,El Salvador
+412,7727.97,3/25/2021,Africa,Distributor,907,Essa McMenamin,emcmenaminbf@networkadvertising.org,Brazil
+413,4697.35,9/15/2021,North America,Online,359,Dehlia Oppy,doppybg@imageshack.us,Sweden
+414,4509.67,1/31/2021,Asia,Online,676,Winifield Sterling,wsterlingbh@vk.com,South Africa
+415,5992.53,3/28/2021,North America,In-store,357,Lois Folonin,lfoloninbi@discuz.net,Ukraine
+416,4865.83,9/2/2021,South America,Direct sales,949,Verney Vazquez,vvazquezbj@amazon.co.uk,South Africa
+417,6506.55,1/15/2021,Asia,In-store,994,Huntley Lynock,hlynockbk@macromedia.com,Sri Lanka
+418,6861.92,12/7/2021,Africa,Direct sales,403,Kristine Streets,kstreetsbl@taobao.com,New Zealand
+419,7648.08,11/10/2021,Europe,Online,479,Bengt Railton,brailtonbm@list-manage.com,Philippines
+420,1928.18,1/16/2021,Asia,Online,530,Dukie Pentin,dpentinbn@aboutads.info,Indonesia
+421,9508.68,3/4/2021,Europe,Distributor,10,Elisabetta McPhail,emcphailbo@fc2.com,Indonesia
+422,5672.92,7/21/2021,Asia,Direct sales,260,Roda Tripcony,rtripconybp@harvard.edu,China
+423,7982.13,2/19/2021,Asia,Direct sales,999,Jelene Aronow,jaronowbq@pagesperso-orange.fr,Canada
+424,5724.5,11/14/2021,North America,Distributor,897,Cori Chrisp,cchrispbr@ft.com,Mexico
+425,8294.78,7/25/2021,Africa,Direct sales,930,Lauretta Bennoe,lbennoebs@csmonitor.com,Portugal
+426,5935.94,5/16/2021,Europe,Distributor,604,Norine Graysmark,ngraysmarkbt@t-online.de,Nigeria
+427,3626.61,12/26/2021,Europe,Online,991,Benji Bulstrode,bbulstrodebu@ustream.tv,France
+428,5572.89,2/24/2021,Europe,In-store,229,Jarvis Lattka,jlattkabv@jiathis.com,Palestinian Territory
+429,5446.51,3/10/2021,Africa,Direct sales,321,Adria Benedite,abeneditebw@ycombinator.com,China
+430,2818.97,1/30/2021,North America,Online,451,Bridgette Bursnoll,bbursnollbx@tuttocitta.it,Brazil
+431,3933.85,5/12/2021,Africa,Distributor,907,Forbes Sperski,fsperskiby@cnbc.com,Philippines
+432,8356.89,1/19/2021,North America,In-store,516,Cliff Gwyther,cgwytherbz@fema.gov,Indonesia
+433,8449.91,11/16/2021,Europe,Online,971,Kareem Astell,kastellc0@example.com,China
+434,6653.47,9/21/2021,South America,Online,354,Gina Elgood,gelgoodc1@cornell.edu,China
+435,2736.01,11/23/2021,South America,Direct sales,501,Ivy Godar,igodarc2@ucoz.com,Sudan
+436,1601.15,11/10/2021,North America,In-store,421,Luciano Turfes,lturfesc3@guardian.co.uk,Philippines
+437,7275.89,2/4/2021,Africa,Online,117,Mariska Minnis,mminnisc4@umn.edu,Sweden
+438,9462.71,11/4/2021,Africa,Direct sales,588,Madelina Mattheeuw,mmattheeuwc5@amazonaws.com,China
+439,1752.96,11/24/2021,South America,In-store,755,Abelard O'Gaven,aogavenc6@hc360.com,Moldova
+440,9783.0,4/21/2021,South America,Direct sales,925,Marlon Makinson,mmakinsonc7@thetimes.co.uk,Sweden
+441,2183.73,3/25/2021,Africa,Online,366,Patrica Nann,pnannc8@google.ca,Portugal
+442,9385.5,3/23/2021,South America,In-store,430,Stephie Skerme,sskermec9@phpbb.com,Canada
+443,560.89,8/15/2021,Asia,In-store,236,Bernard Stenyng,bstenyngca@redcross.org,Estonia
+444,6814.07,6/15/2021,Africa,Online,509,Gert Coathup,gcoathupcb@ed.gov,Palestinian Territory
+445,6906.55,4/9/2021,Asia,Distributor,932,Maximilianus Pentin,mpentincc@behance.net,China
+446,5265.24,3/9/2021,South America,Online,306,Agatha Sibylla,asibyllacd@aboutads.info,Indonesia
+447,5715.94,2/19/2021,South America,Distributor,705,Salli Pfeifer,spfeiferce@deviantart.com,Sweden
+448,6902.48,12/8/2021,North America,Distributor,337,Maurise Bines,mbinescf@example.com,South Korea
+449,1280.08,1/20/2021,Europe,Online,311,Pietrek McGiven,pmcgivencg@auda.org.au,Brazil
+450,3639.18,5/19/2021,North America,Online,854,Rafe Filippo,rfilippoch@indiatimes.com,Sweden
+451,3730.93,7/13/2021,Asia,In-store,293,Mel Inkpen,minkpenci@godaddy.com,Brazil
+452,9926.32,3/23/2021,Europe,Direct sales,393,Tricia Fuentes,tfuentescj@etsy.com,China
+453,1598.32,7/1/2021,Europe,Direct sales,676,Jacob Dawney,jdawneyck@patch.com,Indonesia
+454,4893.24,1/10/2021,Africa,Distributor,204,Jacquie Neighbour,jneighbourcl@hubpages.com,France
+455,7824.83,2/13/2021,South America,Distributor,284,Ced Bugs,cbugscm@aol.com,Bosnia and Herzegovina
+456,4716.42,8/24/2021,Asia,Distributor,234,Valentine Hulse,vhulsecn@timesonline.co.uk,Portugal
+457,2911.44,6/29/2021,Asia,In-store,484,Paule Amner,pamnerco@twitter.com,Argentina
+458,299.01,3/27/2021,Europe,Direct sales,274,Lilllie O'Heagertie,loheagertiecp@woothemes.com,Russia
+459,6940.3,6/5/2021,North America,Online,679,Vicki Vardy,vvardycq@canalblog.com,Russia
+460,9750.24,11/15/2021,Africa,In-store,155,Ashby Kermath,akermathcr@csmonitor.com,Greece
+461,5274.94,3/3/2021,South America,Direct sales,895,Hymie Kenyon,hkenyoncs@ox.ac.uk,Philippines
+462,526.51,4/25/2021,Asia,Direct sales,401,Nollie Etherton,nethertonct@fc2.com,Poland
+463,5836.67,10/24/2021,North America,Direct sales,822,Roanne Matuszkiewicz,rmatuszkiewiczcu@nsw.gov.au,China
+464,8803.08,11/19/2021,South America,Direct sales,966,Brooke Toman,btomancv@mail.ru,Philippines
+465,659.83,2/17/2021,Asia,Direct sales,522,Jermain Rawling,jrawlingcw@moonfruit.com,Indonesia
+466,2919.48,5/11/2021,South America,Online,564,Clementina Perrinchief,cperrinchiefcx@spiegel.de,China
+467,5665.91,6/11/2021,North America,In-store,951,Kari Lowrie,klowriecy@youtu.be,Brazil
+468,1980.66,11/6/2021,South America,Online,940,Shanon Hellwich,shellwichcz@github.com,Venezuela
+469,4489.32,7/3/2021,South America,Online,454,Roda Mullineux,rmullineuxd0@fema.gov,Indonesia
+470,5760.23,7/12/2021,Europe,Online,337,Bebe Vidgen,bvidgend1@vistaprint.com,Palestinian Territory
+471,6467.55,4/8/2021,Europe,Direct sales,465,Sidoney King,skingd2@marketwatch.com,Chile
+472,8998.02,3/25/2021,North America,Direct sales,235,Shoshana Aleshkov,saleshkovd3@themeforest.net,Ukraine
+473,1240.23,6/7/2021,South America,Distributor,396,Sonny Iacomelli,siacomellid4@hp.com,Colombia
+474,3234.53,8/7/2021,Africa,Distributor,81,Sarina Orniz,sornizd5@cdbaby.com,China
+475,2230.11,2/26/2021,Africa,Online,639,Moritz Sherwill,msherwilld6@macromedia.com,Japan
+476,5863.0,10/5/2021,Europe,In-store,256,Nanci Capelow,ncapelowd7@berkeley.edu,Thailand
+477,9649.85,4/28/2021,Asia,Online,610,Deana Lujan,dlujand8@house.gov,Peru
+478,3384.91,12/22/2021,Europe,In-store,75,Joanie Liffey,jliffeyd9@hugedomains.com,Poland
+479,2436.78,3/7/2021,North America,Direct sales,857,Chauncey Whyberd,cwhyberdda@facebook.com,Vietnam
+480,3544.68,7/22/2021,Asia,Distributor,808,Gaelan Carlucci,gcarluccidb@marriott.com,Bangladesh
+481,6648.15,5/17/2021,Europe,Direct sales,971,Calli Baudains,cbaudainsdc@microsoft.com,Portugal
+482,5948.52,5/13/2021,Asia,In-store,324,Sherill Blanc,sblancdd@symantec.com,China
+483,7247.51,8/20/2021,South America,Direct sales,868,Rockey Diggens,rdiggensde@shop-pro.jp,Philippines
+484,2524.39,11/21/2021,Asia,Direct sales,971,Alexandra Poynser,apoynserdf@blogs.com,Poland
+485,591.98,3/10/2021,North America,Online,469,Hermy Vasilenko,hvasilenkodg@home.pl,Philippines
+486,8788.55,2/9/2021,North America,Direct sales,993,Llewellyn Negal,lnegaldh@gmpg.org,Indonesia
+487,3153.11,9/5/2021,Europe,Online,993,Gray Parrott,gparrottdi@dmoz.org,China
+488,1736.86,9/11/2021,Asia,In-store,610,Padget Vakhrushev,pvakhrushevdj@shutterfly.com,Brazil
+489,1333.89,1/13/2021,North America,Distributor,691,Brittne Renner,brennerdk@japanpost.jp,Tanzania
+490,6758.99,6/23/2021,Africa,In-store,57,Johann Beamont,jbeamontdl@sciencedaily.com,China
+491,4106.31,4/10/2021,North America,Distributor,847,Curt Hawksby,chawksbydm@sbwire.com,China
+492,123.86,10/14/2021,Europe,Online,96,Martguerita Casali,mcasalidn@weebly.com,Belgium
+493,9685.91,12/29/2021,Asia,Online,526,Vivian Giraudeau,vgiraudeaudo@un.org,Indonesia
+494,1386.54,4/13/2021,Africa,Distributor,866,Waring de Leon,wdedp@si.edu,France
+495,1384.68,10/15/2021,South America,Online,30,Alfie Bollam,abollamdq@e-recht24.de,Micronesia
+496,7237.79,1/27/2021,North America,Direct sales,57,Evyn Hacket,ehacketdr@clickbank.net,Russia
+497,5828.88,10/2/2021,Africa,In-store,401,Siusan Bickerdicke,sbickerdickeds@usatoday.com,Czech Republic
+498,9988.7,10/17/2021,North America,In-store,926,Steffen Pengilly,spengillydt@home.pl,Brazil
+499,8806.61,6/29/2021,Africa,In-store,832,Lynn Monument,lmonumentdu@ocn.ne.jp,China
+500,6798.93,9/13/2021,North America,In-store,125,Cris Pettipher,cpettipherdv@wikia.com,Indonesia
+501,5768.32,3/19/2021,Africa,Online,125,Cristionna Chivers,cchiversdw@soundcloud.com,China
+502,1586.81,4/9/2021,North America,Online,530,Julianna Eager,jeagerdx@newyorker.com,Armenia
+503,9576.33,10/15/2021,Asia,In-store,170,Sophey Jewkes,sjewkesdy@free.fr,Lithuania
+504,5020.89,6/28/2021,South America,Direct sales,375,Tallou Rosling,troslingdz@newsvine.com,China
+505,3604.44,11/6/2021,Europe,Direct sales,5,Morse Rought,mroughte0@wufoo.com,Indonesia
+506,8478.02,6/30/2021,North America,Distributor,887,Harley Moreno,hmorenoe1@wix.com,Canada
+507,2584.83,6/30/2021,Europe,In-store,582,Harv Ezele,hezelee2@cbc.ca,Finland
+508,2490.56,2/25/2021,South America,In-store,218,Gail Grouse,ggrousee3@csmonitor.com,China
+509,3716.22,9/21/2021,Asia,In-store,52,Meagan Mattiazzo,mmattiazzoe4@dagondesign.com,Thailand
+510,6787.91,12/23/2021,South America,Distributor,699,Odelinda Scarasbrick,oscarasbricke5@yolasite.com,China
+511,7045.48,8/9/2021,South America,Distributor,763,Kim Jagels,kjagelse6@ihg.com,Greece
+512,8231.33,7/16/2021,South America,In-store,638,Gonzales Dillimore,gdillimoree7@bing.com,United States
+513,9642.45,4/23/2021,Asia,Direct sales,299,Gardy Sigward,gsigwarde8@unblog.fr,China
+514,9210.66,8/2/2021,South America,Online,492,Todd Entwhistle,tentwhistlee9@vinaora.com,Philippines
+515,3461.05,7/6/2021,Europe,Distributor,873,Mischa Ismail,mismailea@yahoo.com,Philippines
+516,5252.93,6/26/2021,Africa,Distributor,746,Lillis Marritt,lmarritteb@google.nl,Indonesia
+517,5813.58,6/27/2021,Africa,Distributor,28,Abelard Eyres,aeyresec@shutterfly.com,Portugal
+518,2633.68,1/4/2021,Europe,Distributor,338,Henrie Vearncomb,hvearncombed@goo.ne.jp,Syria
+519,721.17,11/22/2021,Asia,Distributor,262,Dulciana Bengtsen,dbengtsenee@examiner.com,Philippines
+520,8713.0,12/15/2021,North America,Direct sales,349,Asa Deason,adeasonef@amazonaws.com,Democratic Republic of the Congo
+521,9020.23,8/12/2021,North America,Direct sales,782,Fayth Cunnow,fcunnoweg@multiply.com,Norway
+522,2127.29,9/24/2021,Europe,Online,147,Lula McIlwain,lmcilwaineh@fotki.com,Philippines
+523,6690.1,3/25/2021,North America,Online,944,Doti Jacobi,djacobiei@army.mil,Malaysia
+524,9184.56,6/15/2021,North America,Online,1,Craig Burland,cburlandej@google.com.hk,Russia
+525,1365.12,8/11/2021,North America,Distributor,417,Sully Kleinert,skleinertek@gmpg.org,Brazil
+526,9547.12,3/20/2021,Asia,Distributor,607,Nevins Longstreet,nlongstreetel@columbia.edu,Japan
+527,6077.24,11/14/2021,North America,Distributor,304,Beau Wellbank,bwellbankem@ibm.com,Uzbekistan
+528,4222.75,4/16/2021,South America,Online,375,Arlen Bertenshaw,abertenshawen@ovh.net,South Africa
+529,7063.05,1/7/2021,Asia,In-store,348,Jonathan Bachelor,jbacheloreo@wikia.com,China
+530,2896.71,7/6/2021,South America,Online,470,Allene Ludford,aludfordep@mozilla.org,Russia
+531,176.16,3/26/2021,Europe,Online,817,Sophronia Meneer,smeneereq@oracle.com,China
+532,6788.27,5/21/2021,South America,Online,520,Kaycee Lemin,kleminer@uol.com.br,Czech Republic
+533,3116.38,11/2/2021,North America,In-store,336,Aland Niblock,aniblockes@ameblo.jp,Tanzania
+534,5487.0,7/10/2021,South America,In-store,963,Eran Clues,eclueset@4shared.com,Kyrgyzstan
+535,9145.17,1/29/2021,Asia,Online,954,Davon O'Geaney,dogeaneyeu@merriam-webster.com,Ireland
+536,9118.5,6/13/2021,Asia,In-store,659,Amara Swatland,aswatlandev@arstechnica.com,China
+537,5914.69,8/23/2021,North America,Distributor,604,Tessy Bockett,tbockettew@mit.edu,Ukraine
+538,5965.44,1/24/2021,North America,Online,795,Bevon Kembry,bkembryex@usgs.gov,Belarus
+539,9818.3,9/10/2021,Africa,Distributor,11,Skippie Porcas,sporcasey@samsung.com,Czech Republic
+540,398.52,3/17/2021,North America,Distributor,953,Colman Tovey,ctoveyez@goo.gl,China
+541,6912.2,9/17/2021,Africa,Distributor,503,Manny Jeaycock,mjeaycockf0@tinyurl.com,China
+542,4112.37,2/12/2021,Asia,Direct sales,942,Sloan Bruntjen,sbruntjenf1@weebly.com,Portugal
+543,2748.0,7/13/2021,North America,Direct sales,519,Karel Vigors,kvigorsf2@disqus.com,Indonesia
+544,9696.93,3/6/2021,Africa,Distributor,703,Cecilia Dmitr,cdmitrf3@fc2.com,Indonesia
+545,8208.82,10/5/2021,North America,In-store,749,Zelig Bomb,zbombf4@statcounter.com,Brazil
+546,7821.98,9/27/2021,Asia,In-store,515,Coriss Zavattiero,czavattierof5@bloomberg.com,Peru
+547,6552.15,2/10/2021,Asia,Direct sales,516,Ange Catley,acatleyf6@buzzfeed.com,Vietnam
+548,2740.69,8/21/2021,Africa,Direct sales,932,Arnold Blease,ableasef7@unblog.fr,Sweden
+549,9612.75,6/22/2021,Asia,In-store,158,Barnaby Dinan,bdinanf8@desdev.cn,Russia
+550,1281.81,9/10/2021,Africa,Online,96,Dode Blaise,dblaisef9@usatoday.com,China
+551,4187.53,9/22/2021,North America,Online,970,Sheffie Izatson,sizatsonfa@usda.gov,Russia
+552,452.81,4/13/2021,North America,Online,66,Claudianus Neate,cneatefb@engadget.com,Colombia
+553,286.78,2/3/2021,North America,Online,41,Raoul Athridge,rathridgefc@mozilla.com,Sweden
+554,8003.64,5/22/2021,Africa,Online,593,Wendye Ondrasek,wondrasekfd@example.com,Japan
+555,5450.49,9/1/2021,Europe,In-store,895,Derrick Bellow,dbellowfe@census.gov,Uganda
+556,5964.78,5/11/2021,Europe,Distributor,25,Buddie Aslet,basletff@pbs.org,Sweden
+557,1578.71,1/15/2021,Asia,In-store,397,Norman Vowles,nvowlesfg@mlb.com,Argentina
+558,4368.51,10/14/2021,North America,Online,139,Bryanty Aspy,baspyfh@fastcompany.com,China
+559,9840.87,3/23/2021,South America,In-store,633,Herve Aries,hariesfi@privacy.gov.au,Albania
+560,2155.93,6/7/2021,Europe,Direct sales,873,Harriott Cahn,hcahnfj@reverbnation.com,Russia
+561,5088.89,6/8/2021,North America,Direct sales,132,Alexandr Labrow,alabrowfk@deliciousdays.com,Laos
+562,169.17,10/9/2021,Asia,Distributor,80,Ozzie Kubelka,okubelkafl@cafepress.com,Serbia
+563,2272.04,2/10/2021,Asia,Direct sales,31,Berta Olenchenko,bolenchenkofm@army.mil,Sudan
+564,4304.22,2/24/2021,Asia,Online,312,Jackie Longdon,jlongdonfn@trellian.com,China
+565,2201.77,5/7/2021,Europe,Distributor,212,Sarine Bim,sbimfo@uiuc.edu,Mexico
+566,1781.28,10/2/2021,Europe,Online,38,Griz Szymczyk,gszymczykfp@example.com,China
+567,2426.49,8/20/2021,Africa,Online,875,Fee Pilch,fpilchfq@people.com.cn,Poland
+568,2266.56,10/31/2021,North America,In-store,766,Maximilian Ealden,mealdenfr@ovh.net,Argentina
+569,1610.96,12/19/2021,North America,Distributor,436,Freddie Molohan,fmolohanfs@va.gov,Ivory Coast
+570,5900.35,3/13/2021,Europe,Distributor,458,Candra Gwilliam,cgwilliamft@statcounter.com,China
+571,4090.17,6/12/2021,Europe,Online,921,Ericha Bonefant,ebonefantfu@wordpress.com,China
+572,1894.79,2/9/2021,South America,In-store,66,Debor Vinton,dvintonfv@noaa.gov,South Korea
+573,4056.49,5/25/2021,South America,Online,394,Devina Rubinow,drubinowfw@ebay.com,Sweden
+574,4665.52,3/6/2021,South America,In-store,115,Ronny Bramwell,rbramwellfx@newsvine.com,Afghanistan
+575,4300.84,11/18/2021,North America,Distributor,134,Kennett Traher,ktraherfy@noaa.gov,United States
+576,1783.05,6/3/2021,North America,Distributor,289,Jerrylee Haxby,jhaxbyfz@businessinsider.com,Indonesia
+577,8919.81,12/26/2021,Asia,Distributor,143,Padraic Dudenie,pdudenieg0@mozilla.org,China
+578,4635.69,7/30/2021,Asia,Direct sales,86,Jaquelin MacCauley,jmaccauleyg1@ask.com,Ireland
+579,9190.98,5/8/2021,South America,In-store,525,Lesley Gieraths,lgierathsg2@zdnet.com,Colombia
+580,7315.54,10/24/2021,North America,Online,616,Jack Klarzynski,jklarzynskig3@seattletimes.com,Russia
+581,9053.49,5/31/2021,Asia,Direct sales,732,Kerrill Mordecai,kmordecaig4@ovh.net,Sweden
+582,8973.6,5/26/2021,Europe,In-store,125,Diann Roffey,droffeyg5@google.pl,Indonesia
+583,1053.97,6/1/2021,Asia,Distributor,109,Beck Jacobovitch,bjacobovitchg6@wordpress.org,Dominican Republic
+584,3488.81,5/23/2021,Europe,Direct sales,122,Bat Tamas,btamasg7@guardian.co.uk,Canada
+585,2411.95,12/30/2021,Asia,Distributor,687,Sissy Pinckstone,spinckstoneg8@weather.com,Indonesia
+586,6416.6,4/7/2021,North America,Online,523,Willabella Gierhard,wgierhardg9@shutterfly.com,Japan
+587,412.2,10/8/2021,Asia,In-store,341,Lauritz Durrans,ldurransga@springer.com,China
+588,7318.95,7/23/2021,Europe,Distributor,639,Ora Abramsky,oabramskygb@g.co,China
+589,8235.33,11/19/2021,Africa,Online,343,Esme Ransley,eransleygc@disqus.com,China
+590,5353.19,2/3/2021,Asia,In-store,5,Melli Mc Menamin,mmcgd@vkontakte.ru,Sweden
+591,8951.28,4/14/2021,North America,Direct sales,690,Ronna Boutton,rbouttonge@storify.com,China
+592,1943.91,7/12/2021,South America,Direct sales,468,Ody Yearsley,oyearsleygf@quantcast.com,Russia
+593,3209.73,12/11/2021,South America,In-store,445,Sisely Hildred,shildredgg@xing.com,Bosnia and Herzegovina
+594,6649.48,3/21/2021,South America,In-store,81,Paxton Southern,psoutherngh@gravatar.com,Palestinian Territory
+595,9217.36,7/31/2021,Africa,Distributor,734,Petronia Canavan,pcanavangi@columbia.edu,China
+596,8888.56,11/20/2021,South America,Online,62,Karel Millican,kmillicangj@yellowpages.com,China
+597,8793.96,3/6/2021,Asia,In-store,9,Ginnie Kasparski,gkasparskigk@mysql.com,Armenia
+598,9258.79,11/14/2021,Europe,Direct sales,312,Wilie Cotman,wcotmangl@vkontakte.ru,Serbia
+599,8113.85,1/26/2021,North America,Direct sales,653,Ursuline Jestico,ujesticogm@shop-pro.jp,Peru
+600,1159.23,9/3/2021,Asia,Online,26,Gav Perrott,gperrottgn@sciencedirect.com,Indonesia
+601,1889.96,6/5/2021,Asia,Direct sales,573,Brett Melross,bmelrossgo@cornell.edu,Sweden
+602,8251.71,1/20/2021,Europe,Online,540,Sherwood Nevin,snevingp@lycos.com,Croatia
+603,3384.84,10/11/2021,Asia,Online,307,Tobias Roon,troongq@51.la,Colombia
+604,9345.3,9/8/2021,South America,In-store,911,Kirsteni Swadling,kswadlinggr@shop-pro.jp,China
+605,7017.73,7/6/2021,South America,Distributor,903,Saraann Godly,sgodlygs@npr.org,United States
+606,4470.42,11/22/2021,North America,Direct sales,243,Doy Mundee,dmundeegt@sun.com,United States
+607,6577.92,1/17/2021,Asia,In-store,225,Wallie Skewis,wskewisgu@theatlantic.com,Albania
+608,8093.67,9/12/2021,Asia,Online,675,Hedvige McCreary,hmccrearygv@webs.com,Brazil
+609,5091.42,5/18/2021,Africa,Online,922,Shepperd Frankes,sfrankesgw@timesonline.co.uk,Ukraine
+610,787.46,2/18/2021,Africa,Distributor,3,Jeannette Routham,jrouthamgx@goodreads.com,Thailand
+611,5858.12,3/5/2021,South America,Online,723,Georgie Mingard,gmingardgy@nytimes.com,Japan
+612,2278.83,7/14/2021,Asia,In-store,957,Nissie Jenkinson,njenkinsongz@google.com,Poland
+613,36.5,1/2/2021,South America,Distributor,925,Cletis MacGraith,cmacgraithh0@altervista.org,Canada
+614,6597.36,1/14/2021,Europe,Direct sales,586,Lenka Van de Vlies,lvanh1@wiley.com,Indonesia
+615,1954.86,6/24/2021,Asia,Direct sales,80,Corey Farragher,cfarragherh2@netvibes.com,Philippines
+616,5444.88,3/15/2021,Africa,In-store,222,Hamilton Morgan,hmorganh3@cbc.ca,China
+617,8867.2,2/4/2021,Asia,In-store,295,Brynne Pevie,bpevieh4@51.la,Serbia
+618,8176.51,7/2/2021,North America,In-store,847,Laetitia Galle,lgalleh5@mtv.com,Russia
+619,9290.1,4/1/2021,South America,Online,219,Fara Vanyutin,fvanyutinh6@liveinternet.ru,China
+620,7806.5,10/25/2021,Europe,Direct sales,177,Sharai Tydd,styddh7@addtoany.com,Indonesia
+621,539.74,6/6/2021,Asia,Online,993,Thor Andrich,tandrichh8@soup.io,Yemen
+622,8688.66,12/25/2021,Africa,In-store,558,Karmen Baton,kbatonh9@virginia.edu,Vietnam
+623,8399.04,9/12/2021,Africa,Online,972,Padgett Geroldi,pgeroldiha@pen.io,Uganda
+624,4612.77,2/1/2021,South America,In-store,955,Allen Krimmer,akrimmerhb@mozilla.com,Botswana
+625,8890.66,11/18/2021,North America,In-store,348,Meggy Frape,mfrapehc@earthlink.net,Greece
+626,1394.76,4/5/2021,Asia,In-store,914,Sigismundo Tales,staleshd@nbcnews.com,China
+627,714.76,2/25/2021,Asia,Direct sales,755,Darcie Belfit,dbelfithe@skyrock.com,Nicaragua
+628,3181.09,2/7/2021,Africa,Distributor,446,North Snoxall,nsnoxallhf@tripod.com,China
+629,79.82,10/3/2021,Africa,Direct sales,917,Abigail Keitley,akeitleyhg@fotki.com,United States
+630,1863.72,4/8/2021,Africa,Online,157,Debi Meneux,dmeneuxhh@meetup.com,Indonesia
+631,8407.73,1/9/2021,Asia,Online,594,Aland McMonnies,amcmonnieshi@tamu.edu,Russia
+632,1229.64,6/4/2021,South America,In-store,412,Hashim Masters,hmastershj@hud.gov,China
+633,5708.53,11/9/2021,South America,Distributor,475,Shandie De Lisle,sdehk@ox.ac.uk,Russia
+634,3258.2,9/10/2021,North America,Distributor,590,Carry Sachno,csachnohl@google.co.uk,Russia
+635,2954.1,1/27/2021,North America,Online,672,Massimiliano Willoughey,mwillougheyhm@harvard.edu,China
+636,8351.63,5/11/2021,South America,Direct sales,671,Kata Massingham,kmassinghamhn@bluehost.com,Sweden
+637,5470.58,2/17/2021,Africa,Online,590,Jillana Labin,jlabinho@unblog.fr,Brazil
+638,119.06,10/3/2021,Europe,In-store,709,Mair Haye,mhayehp@state.tx.us,Nicaragua
+639,5717.16,8/24/2021,North America,Distributor,825,Gary Neville,gnevillehq@seesaa.net,Indonesia
+640,1653.71,7/27/2021,North America,Direct sales,39,Alberta Pudding,apuddinghr@nbcnews.com,Belarus
+641,2569.21,9/17/2021,Europe,Distributor,40,Lyndsie Chislett,lchisletths@w3.org,Vietnam
+642,4531.74,10/12/2021,South America,Direct sales,115,Thalia Greenrod,tgreenrodht@weather.com,Canada
+643,4591.32,5/3/2021,Africa,In-store,971,Elfreda Ollive,eollivehu@nyu.edu,United States
+644,9466.87,4/21/2021,Europe,In-store,920,Lazar Ethersey,letherseyhv@amazonaws.com,Vietnam
+645,5823.54,7/4/2021,South America,In-store,334,Bartlett Syson,bsysonhw@plala.or.jp,Poland
+646,783.7,7/4/2021,North America,Distributor,315,Ruthann Moorhead,rmoorheadhx@blogspot.com,China
+647,278.66,8/4/2021,South America,In-store,918,Tommy Tiley,ttileyhy@reuters.com,Armenia
+648,997.29,8/4/2021,Africa,In-store,322,Lorrie Cosans,lcosanshz@ehow.com,Afghanistan
+649,6250.48,1/2/2021,Europe,Distributor,291,Wood Winsbury,wwinsburyi0@google.co.jp,Chad
+650,4616.29,5/21/2021,Asia,Distributor,290,Gertrud Doddrell,gdoddrelli1@51.la,Guatemala
+651,9969.27,10/29/2021,South America,Direct sales,909,Coretta Wartnaby,cwartnabyi2@gov.uk,United States
+652,8803.73,2/26/2021,Asia,Online,812,Imogene Hammell,ihammelli3@istockphoto.com,United States
+653,9994.65,8/24/2021,Europe,Online,736,Marris Kimmerling,mkimmerlingi4@paypal.com,Russia
+654,4008.08,3/21/2021,Europe,In-store,902,Eamon Woofinden,ewoofindeni5@census.gov,Sweden
+655,5718.74,5/11/2021,Africa,In-store,184,Faydra Hoggan,fhoggani6@1und1.de,Bahamas
+656,8.64,5/12/2021,South America,Online,191,Nessa Adderson,naddersoni7@ed.gov,China
+657,6963.4,7/1/2021,North America,Online,216,Chandler Lydiate,clydiatei8@google.nl,Cameroon
+658,6577.69,12/9/2021,South America,In-store,93,Hertha Bullin,hbullini9@un.org,Portugal
+659,7022.18,6/27/2021,Asia,Online,714,Kelwin Cree,kcreeia@clickbank.net,Malta
+660,9161.72,5/3/2021,Africa,Direct sales,961,Lorrin Szymanski,lszymanskiib@angelfire.com,Russia
+661,3822.3,12/21/2021,South America,Distributor,615,Jacquelyn Mobberley,jmobberleyic@so-net.ne.jp,China
+662,4920.45,2/22/2021,Asia,Distributor,895,Jacklyn Bowgen,jbowgenid@blogtalkradio.com,Kazakhstan
+663,8675.83,12/11/2021,South America,Online,226,Eadith Harbin,eharbinie@tuttocitta.it,Czech Republic
+664,3625.91,9/7/2021,North America,Online,574,Bobinette Fenney,bfenneyif@statcounter.com,Egypt
+665,9616.07,10/16/2021,North America,In-store,701,Roland Skeat,rskeatig@google.com.au,Greece
+666,2583.29,2/10/2021,South America,Direct sales,309,Brigid Pasque,bpasqueih@cloudflare.com,China
+667,4236.29,2/8/2021,North America,In-store,15,Stacy Vickerman,svickermanii@odnoklassniki.ru,France
+668,8830.75,4/6/2021,Asia,In-store,384,Thain Gumbrell,tgumbrellij@networksolutions.com,Philippines
+669,9835.6,7/19/2021,Africa,In-store,840,Amble Hardi,ahardiik@craigslist.org,Portugal
+670,7039.54,12/14/2021,Asia,Distributor,596,Shayla Antonijevic,santonijevicil@zdnet.com,Thailand
+671,7042.43,11/2/2021,Asia,Online,824,Fancy Sutherland,fsutherlandim@sun.com,United States
+672,6415.33,4/14/2021,Europe,Online,815,Dulcinea Hamley,dhamleyin@linkedin.com,China
+673,1252.07,10/12/2021,Asia,Direct sales,749,Gerry Lambard,glambardio@csmonitor.com,Malaysia
+674,7593.82,3/1/2021,Asia,Direct sales,290,Hilary Lies,hliesip@epa.gov,Colombia
+675,8075.72,5/11/2021,North America,In-store,703,Adelind Elletson,aelletsoniq@europa.eu,Peru
+676,401.82,1/11/2021,Asia,Direct sales,11,Doloritas Dennert,ddennertir@huffingtonpost.com,China
+677,4737.28,10/28/2021,Europe,Distributor,451,Pollyanna Simioli,psimioliis@economist.com,China
+678,428.66,8/23/2021,South America,Distributor,52,Yoshiko Stanmore,ystanmoreit@hostgator.com,Argentina
+679,4995.92,8/29/2021,Asia,In-store,405,Suzy Swyer,sswyeriu@nature.com,Russia
+680,2183.8,8/8/2021,Asia,Online,195,Hart Fronks,hfronksiv@webnode.com,Philippines
+681,3203.16,7/26/2021,North America,Online,728,Ania Cargen,acargeniw@miitbeian.gov.cn,France
+682,364.33,12/11/2021,Africa,Online,76,Gabi Roache,groacheix@desdev.cn,China
+683,4593.05,9/9/2021,Asia,In-store,900,Frazier Linfoot,flinfootiy@nature.com,Indonesia
+684,5232.99,6/2/2021,North America,In-store,37,Fancie Loadman,floadmaniz@cornell.edu,Indonesia
+685,6638.26,12/22/2021,Africa,In-store,789,Gasparo Mallam,gmallamj0@wisc.edu,China
+686,3502.47,7/29/2021,Asia,Online,762,Jemima Cantopher,jcantopherj1@apple.com,China
+687,8218.09,9/19/2021,Europe,Distributor,48,Salvatore Siveter,ssiveterj2@marketwatch.com,China
+688,9969.47,2/20/2021,North America,In-store,144,Jacquelyn Giddens,jgiddensj3@people.com.cn,Indonesia
+689,5126.84,6/10/2021,South America,In-store,992,Rusty Bartosik,rbartosikj4@cnet.com,South Korea
+690,8091.63,5/26/2021,Africa,Direct sales,362,Angel Aldersey,aalderseyj5@businessweek.com,Uzbekistan
+691,9313.44,12/2/2021,South America,Distributor,174,Kurt Christin,kchristinj6@constantcontact.com,France
+692,5410.26,6/24/2021,Africa,Online,844,Marleah Jorck,mjorckj7@ifeng.com,Kiribati
+693,4722.52,12/25/2021,Asia,Online,211,Johny Gavaghan,jgavaghanj8@chron.com,Greece
+694,6325.53,4/26/2021,Europe,In-store,772,Jackie Gillio,jgillioj9@seesaa.net,Brazil
+695,6958.07,4/14/2021,Asia,Direct sales,795,Hernando Bill,hbillja@psu.edu,China
+696,7338.91,9/19/2021,Africa,Direct sales,562,Fenelia Benallack,fbenallackjb@xinhuanet.com,China
+697,9807.57,8/18/2021,Europe,Distributor,107,Blakeley Quadrio,bquadriojc@java.com,Brazil
+698,2227.4,1/16/2021,South America,Online,634,Jesse Steventon,jsteventonjd@blogtalkradio.com,Philippines
+699,3529.84,12/11/2021,South America,Online,803,Mervin McLice,mmcliceje@state.gov,Nigeria
+700,8036.48,10/5/2021,North America,In-store,180,Valry Kyston,vkystonjf@barnesandnoble.com,Russia
+701,4676.74,1/23/2021,South America,Online,777,Carolan Delany,cdelanyjg@gravatar.com,Russia
+702,1264.6,8/19/2021,North America,In-store,234,Katha Ledstone,kledstonejh@nationalgeographic.com,China
+703,8802.26,10/21/2021,Europe,Online,422,Jeffrey Martinie,jmartinieji@psu.edu,Cuba
+704,7277.74,4/17/2021,South America,Distributor,253,Pren Stuckow,pstuckowjj@dmoz.org,Russia
+705,4121.89,2/3/2021,North America,In-store,639,Mar Romaint,mromaintjk@forbes.com,Finland
+706,4588.99,4/16/2021,South America,Online,819,Rafaello Ivanovic,rivanovicjl@thetimes.co.uk,Philippines
+707,1682.74,11/27/2021,Asia,Online,208,Zachery Longden,zlongdenjm@google.it,Portugal
+708,2860.13,1/27/2021,South America,Direct sales,927,Lissi Brydone,lbrydonejn@ucoz.com,Thailand
+709,2261.04,7/27/2021,Africa,Direct sales,820,Shepard Staunton,sstauntonjo@feedburner.com,Portugal
+710,7587.61,10/23/2021,Africa,In-store,512,Gallard Loffill,gloffilljp@ucoz.ru,France
+711,1157.51,12/17/2021,Europe,In-store,490,Vicki Veivers,vveiversjq@netscape.com,Indonesia
+712,1557.59,9/19/2021,Europe,Online,49,Leif Meadway,lmeadwayjr@histats.com,China
+713,7919.4,8/9/2021,Africa,In-store,529,Waiter Lotte,wlottejs@tinyurl.com,Czech Republic
+714,1439.07,8/27/2021,North America,Direct sales,655,Everett Besemer,ebesemerjt@weibo.com,Brazil
+715,3460.8,10/8/2021,Asia,Distributor,22,Cris Lessmare,clessmareju@360.cn,China
+716,9268.93,9/24/2021,Africa,Direct sales,357,Donovan Pover,dpoverjv@msu.edu,Russia
+717,7292.82,10/9/2021,South America,In-store,862,Joella Reinbeck,jreinbeckjw@issuu.com,China
+718,9248.88,10/23/2021,South America,In-store,418,Gale Mogford,gmogfordjx@facebook.com,Bangladesh
+719,926.69,5/16/2021,North America,In-store,19,Odella Hackett,ohackettjy@hp.com,Liberia
+720,2927.04,5/4/2021,Africa,Distributor,801,Goldina De Roeck,gdejz@mediafire.com,Sweden
+721,9062.3,2/4/2021,North America,Distributor,746,Christy Ingall,cingallk0@businesswire.com,Russia
+722,861.1,12/28/2021,Europe,In-store,269,Vasilis Tennison,vtennisonk1@diigo.com,Poland
+723,2537.0,11/8/2021,Africa,Online,481,Humphrey Imison,himisonk2@clickbank.net,Cameroon
+724,8873.3,11/6/2021,Asia,Distributor,106,Merill Pinare,mpinarek3@shutterfly.com,Indonesia
+725,1708.19,8/29/2021,Europe,In-store,881,Millard Seamans,mseamansk4@state.tx.us,Nigeria
+726,8231.14,10/16/2021,Asia,Online,583,Jerad Maxted,jmaxtedk5@springer.com,Luxembourg
+727,2677.29,10/25/2021,Europe,In-store,84,Avis Patesel,apateselk6@ovh.net,Peru
+728,3814.69,2/12/2021,Africa,Online,186,Karlik Bredee,kbredeek7@unicef.org,Philippines
+729,8814.72,9/18/2021,Asia,Distributor,759,Eadie Barrs,ebarrsk8@ehow.com,Ukraine
+730,13.69,7/24/2021,Asia,Distributor,698,Paulette O'Dempsey,podempseyk9@yelp.com,Bulgaria
+731,6995.21,3/19/2021,Europe,In-store,208,Easter Kenningley,ekenningleyka@jiathis.com,Greece
+732,6438.01,2/7/2021,Asia,Distributor,439,Leroy Schrinel,lschrinelkb@yahoo.co.jp,Portugal
+733,9994.78,5/24/2021,Africa,Distributor,299,Mickey Smaleman,msmalemankc@barnesandnoble.com,Sweden
+734,271.48,5/30/2021,Asia,Distributor,618,Rosemarie Wasmer,rwasmerkd@ning.com,Thailand
+735,2746.13,8/18/2021,South America,Direct sales,110,Maryann Callaby,mcallabyke@adobe.com,Kazakhstan
+736,7296.34,2/6/2021,Asia,In-store,100,Walsh Moggle,wmogglekf@europa.eu,Indonesia
+737,2824.53,6/4/2021,Asia,In-store,620,Melloney Mallinson,mmallinsonkg@trellian.com,China
+738,3918.19,3/5/2021,Africa,Distributor,893,Bale Maciaszek,bmaciaszekkh@plala.or.jp,Sweden
+739,7039.07,4/11/2021,Africa,Distributor,555,Augustine Leades,aleadeski@ebay.com,Laos
+740,6277.53,12/16/2021,North America,Distributor,978,Mord Themann,mthemannkj@cam.ac.uk,Poland
+741,4275.51,10/23/2021,Africa,Direct sales,172,Erin Marchant,emarchantkk@huffingtonpost.com,China
+742,4206.97,6/15/2021,South America,Online,579,Debra Mollen,dmollenkl@ask.com,Indonesia
+743,5550.66,8/30/2021,Africa,Distributor,134,Betteanne Boller,bbollerkm@friendfeed.com,China
+744,3219.89,8/27/2021,South America,In-store,363,Dawn Labb,dlabbkn@constantcontact.com,Argentina
+745,7716.72,4/3/2021,Asia,Online,849,Norean Anten,nantenko@printfriendly.com,Canada
+746,2580.91,8/24/2021,Africa,Distributor,750,Ermengarde Aleksidze,ealeksidzekp@google.pl,Slovenia
+747,782.35,3/14/2021,South America,Online,240,Huey Buncher,hbuncherkq@xing.com,Slovenia
+748,2285.26,4/12/2021,South America,Distributor,480,Deva Ramsdell,dramsdellkr@yandex.ru,Poland
+749,1289.62,5/19/2021,Europe,Distributor,991,Averil Sans,asansks@patch.com,Russia
+750,7295.96,8/20/2021,Africa,Online,357,Salomi Aikin,saikinkt@loc.gov,Ethiopia
+751,3440.83,7/31/2021,North America,In-store,319,Bel McOwen,bmcowenku@answers.com,Brazil
+752,3245.63,8/23/2021,Asia,Online,59,Odette MacGragh,omacgraghkv@loc.gov,Argentina
+753,5952.98,9/24/2021,South America,Distributor,21,Lu Dodwell,ldodwellkw@yellowbook.com,China
+754,1469.44,1/18/2021,Asia,In-store,842,Dorie Martinie,dmartiniekx@biblegateway.com,Thailand
+755,559.12,5/10/2021,North America,Direct sales,772,Dell McTeer,dmcteerky@flickr.com,Vietnam
+756,476.11,11/10/2021,South America,Distributor,915,Daphene Mahomet,dmahometkz@phpbb.com,France
+757,7837.19,8/9/2021,Africa,Distributor,353,Carlen Mularkey,cmularkeyl0@opera.com,New Zealand
+758,1982.28,6/18/2021,North America,In-store,400,Augustin Joyner,ajoynerl1@woothemes.com,Philippines
+759,7491.54,11/21/2021,North America,Distributor,468,Sylas Mc Giffin,smcl2@kickstarter.com,China
+760,3520.1,8/11/2021,Europe,In-store,904,Felecia Nursey,fnurseyl3@sciencedirect.com,China
+761,6308.3,1/5/2021,Africa,Online,387,Hillary Karolovsky,hkarolovskyl4@fotki.com,Canada
+762,8560.07,2/16/2021,Asia,In-store,885,Rob Boom,rbooml5@exblog.jp,Kazakhstan
+763,961.36,3/15/2021,South America,Distributor,973,Purcell Pashenkov,ppashenkovl6@oracle.com,France
+764,4358.67,5/15/2021,Europe,Online,505,Cordie Gates,cgatesl7@oaic.gov.au,China
+765,8979.53,2/26/2021,Europe,In-store,628,Dom Nadin,dnadinl8@webs.com,China
+766,75.26,9/22/2021,South America,Online,703,Roshelle Rasor,rrasorl9@delicious.com,Brazil
+767,7827.19,9/20/2021,North America,In-store,169,Napoleon Legerwood,nlegerwoodla@yellowpages.com,Philippines
+768,7253.09,7/7/2021,Asia,In-store,182,Lemuel Halvorsen,lhalvorsenlb@springer.com,Dominica
+769,3123.27,3/1/2021,North America,Direct sales,338,Fons McGarvie,fmcgarvielc@shutterfly.com,China
+770,596.26,1/13/2021,North America,Distributor,803,Shanta Ahren,sahrenld@4shared.com,China
+771,5872.51,9/7/2021,South America,In-store,510,Elana Osgodby,eosgodbyle@topsy.com,Sri Lanka
+772,8659.06,5/28/2021,North America,In-store,644,Ramsey Schukert,rschukertlf@jiathis.com,China
+773,5595.78,3/14/2021,South America,Direct sales,931,Mendel Risebrow,mrisebrowlg@berkeley.edu,Japan
+774,2410.95,7/16/2021,North America,Online,122,Essy Woliter,ewoliterlh@earthlink.net,Mayotte
+775,929.84,8/28/2021,Asia,Online,298,Milissent Riggert,mriggertli@opensource.org,Indonesia
+776,8606.71,8/22/2021,Africa,Direct sales,921,Ulrich Hindrick,uhindricklj@booking.com,Mali
+777,7602.18,5/18/2021,Africa,In-store,591,Hoebart Hinkins,hhinkinslk@nature.com,Brazil
+778,7386.2,11/8/2021,South America,In-store,14,Nollie Spyvye,nspyvyell@histats.com,Belarus
+779,1965.95,1/28/2021,Europe,Distributor,487,Henriette Fend,hfendlm@clickbank.net,Ukraine
+780,7833.98,3/19/2021,North America,Online,468,Debora Pharrow,dpharrowln@newyorker.com,Peru
+781,4399.94,2/21/2021,Asia,Online,482,Iolande Cowerd,icowerdlo@meetup.com,China
+782,9243.51,3/22/2021,South America,Online,372,Kienan Tubbles,ktubbleslp@boston.com,Thailand
+783,3844.42,11/26/2021,Asia,Online,522,Pierce Mirfin,pmirfinlq@jiathis.com,Portugal
+784,4858.57,7/17/2021,Asia,Direct sales,80,Dolly Shoppee,dshoppeelr@unicef.org,Portugal
+785,3405.46,8/5/2021,North America,Online,209,Lyman Sanzio,lsanziols@hibu.com,China
+786,1092.12,2/12/2021,South America,Direct sales,132,Claudianus Vaudrey,cvaudreylt@w3.org,France
+787,463.15,10/15/2021,Europe,Direct sales,886,Francine O'Mara,fomaralu@delicious.com,Sri Lanka
+788,9374.96,11/16/2021,Asia,In-store,373,Cele Headings,cheadingslv@vinaora.com,China
+789,6503.02,12/2/2021,North America,Direct sales,29,Fayth Gamon,fgamonlw@nationalgeographic.com,Poland
+790,6310.77,2/5/2021,Africa,Direct sales,863,Johan Rosier,jrosierlx@state.tx.us,Argentina
+791,7969.41,7/7/2021,Asia,In-store,402,Daron Devote,ddevotely@360.cn,China
+792,1246.1,10/31/2021,Africa,Distributor,261,Floria Moakson,fmoaksonlz@amazon.de,China
+793,5471.11,5/13/2021,Asia,Online,494,Kissiah Barge,kbargem0@walmart.com,Russia
+794,319.88,4/16/2021,South America,Direct sales,495,Hammad Clapson,hclapsonm1@stumbleupon.com,China
+795,4742.98,7/3/2021,North America,Direct sales,225,Minetta Mainds,mmaindsm2@answers.com,Costa Rica
+796,2872.16,12/10/2021,Africa,Direct sales,474,Ogdan Earlam,oearlamm3@umn.edu,Venezuela
+797,7970.8,5/12/2021,South America,Distributor,751,Brynn Killingsworth,bkillingsworthm4@gnu.org,Brazil
+798,3618.97,5/20/2021,Africa,Direct sales,993,Sharla Laverick,slaverickm5@cisco.com,Russia
+799,2178.32,2/6/2021,North America,Distributor,980,Patten Vaun,pvaunm6@cam.ac.uk,Indonesia
+800,1155.06,3/13/2021,Europe,Direct sales,249,Uri Deeny,udeenym7@amazonaws.com,Tanzania
+801,8178.92,7/23/2021,South America,Distributor,704,Pieter Tomczak,ptomczakm8@dailymail.co.uk,Sweden
+802,2693.29,8/19/2021,North America,Direct sales,327,Wright Boate,wboatem9@china.com.cn,Brazil
+803,3882.76,10/8/2021,North America,Online,227,Gardiner Atthow,gatthowma@bravesites.com,Uganda
+804,428.92,9/17/2021,Africa,In-store,694,Waneta Huttley,whuttleymb@google.com.br,Indonesia
+805,8408.68,8/18/2021,South America,Online,446,Catherine Mazella,cmazellamc@nyu.edu,China
+806,6657.31,5/10/2021,Asia,Direct sales,339,Pearl Budding,pbuddingmd@techcrunch.com,Peru
+807,3113.88,4/11/2021,Africa,Distributor,205,Kendricks Copnall,kcopnallme@smh.com.au,Guam
+808,4140.81,1/16/2021,North America,In-store,839,Scarface Itzkovsky,sitzkovskymf@smh.com.au,Brazil
+809,4178.54,5/18/2021,Africa,Distributor,983,Dyan Inggall,dinggallmg@blogs.com,Ukraine
+810,4360.4,7/25/2021,South America,Distributor,273,Ira O'Doghesty,iodoghestymh@house.gov,Canada
+811,1489.36,3/24/2021,Africa,Distributor,578,Deana MacMearty,dmacmeartymi@harvard.edu,Sweden
+812,9580.37,10/25/2021,North America,In-store,1,Lorinda Phillips,lphillipsmj@unicef.org,Brazil
+813,3320.57,3/13/2021,Africa,Online,53,Valencia Bassill,vbassillmk@patch.com,United States
+814,2962.37,3/2/2021,Europe,Online,887,Mellie Trewhela,mtrewhelaml@deviantart.com,China
+815,1236.81,2/6/2021,Asia,Distributor,591,Devi Densham,ddenshammm@simplemachines.org,South Africa
+816,9380.37,4/28/2021,Europe,Distributor,267,Farly Shynn,fshynnmn@harvard.edu,Norway
+817,2503.48,9/17/2021,Asia,Online,833,Myrtice Shatliffe,mshatliffemo@ifeng.com,Indonesia
+818,9986.82,12/2/2021,North America,Distributor,514,Paulie Brunone,pbrunonemp@netvibes.com,Uganda
+819,5647.6,7/24/2021,Asia,Direct sales,82,Cati Lambal,clambalmq@disqus.com,Russia
+820,681.54,4/28/2021,North America,In-store,255,Chloris McGourty,cmcgourtymr@mozilla.com,Argentina
+821,5516.8,3/9/2021,Asia,Direct sales,571,Jourdan Roney,jroneyms@examiner.com,Indonesia
+822,97.72,1/14/2021,Asia,In-store,55,Cissy Eberle,ceberlemt@lycos.com,China
+823,5548.22,11/21/2021,Europe,Online,883,Fair Corcoran,fcorcoranmu@cbsnews.com,Canada
+824,4129.29,6/29/2021,Africa,Distributor,159,Carter Olenikov,colenikovmv@latimes.com,Indonesia
+825,207.18,6/26/2021,Africa,Distributor,32,Annalise Erricker,aerrickermw@accuweather.com,France
+826,7260.06,2/17/2021,Asia,Direct sales,786,Sherilyn Byne,sbynemx@salon.com,Vietnam
+827,9366.57,8/12/2021,South America,Distributor,365,Sharia Menlove,smenlovemy@vkontakte.ru,Czech Republic
+828,4508.78,8/31/2021,South America,Online,364,Anett Pickworth,apickworthmz@behance.net,France
+829,1447.81,9/17/2021,North America,In-store,61,Jozef Weatherhead,jweatherheadn0@freewebs.com,China
+830,9725.96,2/12/2021,Asia,Direct sales,228,Arlin Meatyard,ameatyardn1@nymag.com,Indonesia
+831,9293.16,11/16/2021,Africa,Online,846,Jacquetta Keenor,jkeenorn2@europa.eu,Italy
+832,6786.77,1/15/2021,Asia,Online,31,Debee Pudding,dpuddingn3@pinterest.com,Czech Republic
+833,9914.03,3/5/2021,North America,In-store,611,Amye Dyerson,adyersonn4@princeton.edu,Portugal
+834,5803.56,4/15/2021,South America,Online,705,Alida Chateau,achateaun5@ft.com,Egypt
+835,4480.69,12/5/2021,North America,In-store,874,Alyssa Claibourn,aclaibournn6@gnu.org,France
+836,57.78,6/12/2021,Europe,Online,977,Francisca Klainman,fklainmann7@hexun.com,China
+837,8346.13,9/27/2021,Asia,Direct sales,578,Doria Vannacci,dvannaccin8@delicious.com,Indonesia
+838,4264.15,6/5/2021,Europe,Direct sales,831,Zebulen Buss,zbussn9@npr.org,Portugal
+839,2216.65,8/8/2021,South America,Online,573,Melisenda Esp,mespna@state.gov,Indonesia
+840,8774.13,11/15/2021,North America,Online,875,Farra Boow,fboownb@linkedin.com,Indonesia
+841,6311.18,10/13/2021,Europe,Distributor,702,Willetta Schrir,wschrirnc@wix.com,China
+842,3979.16,4/18/2021,North America,Distributor,385,Alejoa Candey,acandeynd@about.me,Russia
+843,346.26,11/23/2021,South America,Distributor,355,Liuka Bouchard,lbouchardne@nasa.gov,Hungary
+844,1615.28,9/20/2021,Africa,Direct sales,320,Elihu Greatbank,egreatbanknf@clickbank.net,Netherlands
+845,4912.12,10/17/2021,Europe,In-store,117,Miran Stockall,mstockallng@liveinternet.ru,Armenia
+846,9995.54,10/23/2021,Africa,Online,593,Devlen Norbury,dnorburynh@weebly.com,Sweden
+847,5297.16,7/29/2021,Africa,Distributor,103,Valentijn Sliman,vslimanni@bandcamp.com,China
+848,5764.29,10/16/2021,South America,Distributor,840,Filia Judron,fjudronnj@google.ca,China
+849,6415.32,8/4/2021,North America,Direct sales,117,Julissa Spellworth,jspellworthnk@un.org,Poland
+850,778.45,9/8/2021,Europe,Distributor,744,Corney O'Doherty,codohertynl@unicef.org,China
+851,87.7,4/8/2021,Europe,Direct sales,127,Guthrey Gross,ggrossnm@dell.com,Czech Republic
+852,2693.07,2/21/2021,Europe,Online,821,Reggi Greenan,rgreenannn@biglobe.ne.jp,Colombia
+853,9561.78,10/17/2021,Europe,Online,190,Mersey Van Dijk,mvanno@example.com,Mexico
+854,6844.52,10/15/2021,Europe,In-store,865,Edan Floris,eflorisnp@4shared.com,Portugal
+855,6391.09,9/26/2021,South America,In-store,951,Michel Challiss,mchallissnq@yelp.com,China
+856,2870.89,11/3/2021,South America,Distributor,996,Ruddie Serle,rserlenr@photobucket.com,Canada
+857,6790.55,3/17/2021,North America,In-store,224,Frayda Sproule,fsproulens@answers.com,Greece
+858,1031.81,7/15/2021,Asia,In-store,346,Garth Ashelford,gashelfordnt@vimeo.com,Indonesia
+859,2085.61,8/1/2021,South America,Distributor,851,Anallese Das,adasnu@pinterest.com,Russia
+860,4140.65,6/29/2021,Africa,Distributor,725,Hazlett Rafe,hrafenv@mapquest.com,United States
+861,914.07,5/10/2021,Africa,Online,205,Zacharia Sainteau,zsainteaunw@indiatimes.com,China
+862,7495.09,11/17/2021,Africa,In-store,814,Derwin Spurdens,dspurdensnx@symantec.com,China
+863,5375.67,9/20/2021,North America,Direct sales,905,Kerianne Lis,klisny@ftc.gov,Israel
+864,4727.63,3/23/2021,North America,Online,307,Mellisent Bodicum,mbodicumnz@edublogs.org,Indonesia
+865,5189.2,1/23/2021,Asia,Direct sales,97,Myrta Edgson,medgsono0@nature.com,Philippines
+866,1942.8,3/10/2021,Africa,Direct sales,252,Andriette Barrabeale,abarrabealeo1@amazon.de,Tanzania
+867,9172.75,1/29/2021,Europe,Distributor,37,Flem Skeels,fskeelso2@photobucket.com,France
+868,710.35,9/18/2021,North America,Distributor,424,Hailey Rugge,hruggeo3@posterous.com,Kazakhstan
+869,6263.76,10/21/2021,Europe,In-store,867,Sydney Cordes,scordeso4@ebay.com,Germany
+870,1466.43,10/10/2021,Asia,Direct sales,961,Gwyneth Cusworth,gcuswortho5@biglobe.ne.jp,Indonesia
+871,4376.65,10/27/2021,South America,Direct sales,42,Dougy Baudacci,dbaudaccio6@mediafire.com,Madagascar
+872,1485.65,9/30/2021,North America,Distributor,983,Hunt Phillcox,hphillcoxo7@blogs.com,Bangladesh
+873,7299.05,9/28/2021,Asia,Online,275,Innis Devons,idevonso8@woothemes.com,Greece
+874,9905.94,12/25/2021,North America,Distributor,649,Davide Budibent,dbudibento9@youtu.be,China
+875,1748.92,1/4/2021,North America,Online,415,Biron Gartery,bgarteryoa@technorati.com,China
+876,5191.2,1/16/2021,South America,Online,969,Roberta Priddis,rpriddisob@youtu.be,China
+877,3629.15,10/31/2021,Africa,Direct sales,312,Waylin Egginson,wegginsonoc@fastcompany.com,South Africa
+878,8591.26,4/15/2021,Africa,Direct sales,753,Randolph Norker,rnorkerod@spiegel.de,Philippines
+879,4410.57,10/8/2021,Africa,Distributor,674,Ulric Pfiffer,upfifferoe@umn.edu,Malaysia
+880,8354.67,8/4/2021,South America,Direct sales,306,Ralf Mansfield,rmansfieldof@over-blog.com,China
+881,9967.22,8/8/2021,North America,In-store,470,Mord Klimmek,mklimmekog@sogou.com,Poland
+882,4744.69,1/21/2021,Asia,In-store,305,Jen Nisbet,jnisbetoh@yahoo.co.jp,Japan
+883,5496.89,5/25/2021,Africa,Online,271,Pamella Ciccarelli,pciccarellioi@quantcast.com,Indonesia
+884,5835.73,2/3/2021,Asia,Distributor,728,Mallissa Shelton,msheltonoj@stumbleupon.com,Finland
+885,8041.32,6/28/2021,Asia,In-store,148,Nanine Ashling,nashlingok@narod.ru,Peru
+886,6973.63,2/24/2021,South America,Online,383,Estella Andor,eandorol@google.com,Portugal
+887,3248.36,12/2/2021,North America,Direct sales,480,Hesther O'Fallowne,hofallowneom@tinypic.com,Portugal
+888,449.07,6/16/2021,Asia,Distributor,216,Phedra Heinz,pheinzon@delicious.com,Philippines
+889,2370.88,5/1/2021,Africa,Direct sales,461,Kizzie Windybank,kwindybankoo@cisco.com,Argentina
+890,3617.26,3/22/2021,Europe,Direct sales,228,Mano Bratty,mbrattyop@icq.com,Portugal
+891,9833.41,1/26/2021,North America,In-store,732,Sidnee Dingwall,sdingwalloq@miibeian.gov.cn,France
+892,627.98,1/24/2021,South America,Distributor,471,Mendel Cano,mcanoor@globo.com,Indonesia
+893,4773.53,2/13/2021,Africa,Distributor,524,Bealle Purdom,bpurdomos@loc.gov,China
+894,4800.7,9/28/2021,Africa,In-store,3,Templeton Houldcroft,thouldcroftot@quantcast.com,France
+895,788.94,3/14/2021,South America,In-store,787,Rosamund Sheirlaw,rsheirlawou@typepad.com,Brazil
+896,9822.93,4/8/2021,Africa,Direct sales,435,Wilden Benardet,wbenardetov@vistaprint.com,China
+897,3579.51,6/10/2021,Africa,Distributor,943,Judah Cloonan,jcloonanow@sourceforge.net,Sweden
+898,1953.99,2/9/2021,North America,Online,351,Matias Rider,mriderox@moonfruit.com,Saint Lucia
+899,5310.29,4/14/2021,North America,Direct sales,232,Anette Sackes,asackesoy@cocolog-nifty.com,Philippines
+900,2638.69,9/30/2021,Europe,Direct sales,517,Clevey Attryde,cattrydeoz@topsy.com,Serbia
+901,7728.76,3/6/2021,Europe,Online,705,Dorolisa Stollery,dstolleryp0@de.vu,China
+902,9106.29,3/21/2021,South America,Online,140,Faber Simione,fsimionep1@auda.org.au,Poland
+903,3601.06,10/19/2021,Africa,Distributor,79,Kerry Klainman,kklainmanp2@msu.edu,China
+904,7639.67,11/2/2021,North America,Distributor,348,Riannon Demer,rdemerp3@paginegialle.it,China
+905,814.77,2/24/2021,North America,Online,646,Mano Rabb,mrabbp4@youku.com,Ukraine
+906,2313.37,10/2/2021,Asia,In-store,621,Roberto Essame,ressamep5@i2i.jp,Mexico
+907,3264.93,12/1/2021,Asia,Online,172,Kandy Barnardo,kbarnardop6@sakura.ne.jp,Brazil
+908,8015.18,10/28/2021,Africa,Direct sales,762,Oriana Goatman,ogoatmanp7@pbs.org,Papua New Guinea
+909,8719.59,4/30/2021,North America,Direct sales,299,Clotilda Dellenbroker,cdellenbrokerp8@cocolog-nifty.com,Philippines
+910,9933.41,7/18/2021,Europe,Direct sales,730,Alexine Bentham,abenthamp9@lycos.com,Honduras
+911,3017.57,11/13/2021,North America,Online,912,Siegfried Bonevant,sbonevantpa@phpbb.com,Russia
+912,3148.09,11/25/2021,Africa,In-store,496,Jose Heelis,jheelispb@csmonitor.com,Indonesia
+913,2477.06,4/16/2021,Europe,Online,64,Jillene Illingworth,jillingworthpc@youtube.com,Portugal
+914,627.78,4/9/2021,Africa,Online,762,Ryley Dicte,rdictepd@yale.edu,Sweden
+915,7884.88,11/29/2021,Africa,In-store,967,Phil Bresnahan,pbresnahanpe@ucla.edu,Uzbekistan
+916,2788.88,4/25/2021,Europe,Distributor,833,Teodor Rudd,truddpf@blog.com,China
+917,210.73,5/1/2021,South America,Direct sales,518,Hilario MacCallester,hmaccallesterpg@wiley.com,Brazil
+918,9148.32,3/13/2021,Africa,Distributor,308,Gearard Simek,gsimekph@baidu.com,Poland
+919,2438.07,12/29/2021,Europe,In-store,527,Fleurette Haisell,fhaisellpi@weather.com,Kazakhstan
+920,4957.99,12/16/2021,North America,Distributor,295,Brigit Liebrecht,bliebrechtpj@drupal.org,China
+921,3570.82,9/24/2021,South America,Direct sales,250,Moina Tofanelli,mtofanellipk@nasa.gov,Philippines
+922,7233.25,3/8/2021,South America,Direct sales,685,Lynde Balassi,lbalassipl@vk.com,New Zealand
+923,4403.8,12/20/2021,South America,Direct sales,533,Conchita Wicken,cwickenpm@constantcontact.com,Georgia
+924,8748.8,2/13/2021,Europe,Online,132,Vina Tackell,vtackellpn@hao123.com,France
+925,4074.19,10/14/2021,Africa,Online,906,Karlyn Polini,kpolinipo@paginegialle.it,Russia
+926,5227.93,3/29/2021,North America,In-store,360,Tiler Feldklein,tfeldkleinpp@paginegialle.it,Cameroon
+927,2442.3,3/10/2021,Asia,Direct sales,225,Goldia O'Nion,gonionpq@fastcompany.com,Brazil
+928,6984.17,7/7/2021,South America,Direct sales,477,Vassili Youde,vyoudepr@marketwatch.com,Sweden
+929,2301.5,9/19/2021,Europe,Online,259,Madge Muglestone,mmuglestoneps@army.mil,United States
+930,7303.51,7/29/2021,North America,Distributor,687,Kiley Jordeson,kjordesonpt@gmpg.org,Philippines
+931,5771.89,11/19/2021,Europe,In-store,50,Blondelle Penwell,bpenwellpu@columbia.edu,China
+932,76.71,11/20/2021,Asia,Distributor,111,Erinn Bryett,ebryettpv@nsw.gov.au,Indonesia
+933,1648.27,7/2/2021,South America,In-store,37,Odette Birden,obirdenpw@wisc.edu,China
+934,8778.26,1/19/2021,North America,In-store,653,Jordan Graundisson,jgraundissonpx@hud.gov,Brazil
+935,5721.82,9/13/2021,Africa,Direct sales,155,Elliott Gladeche,egladechepy@dell.com,China
+936,4962.95,3/13/2021,North America,Online,863,Idaline Maggi,imaggipz@discuz.net,Tanzania
+937,9257.77,2/6/2021,Africa,Direct sales,310,Meggy Braiden,mbraidenq0@sogou.com,China
+938,4304.69,11/28/2021,South America,Online,700,Traver Ganing,tganingq1@nsw.gov.au,Ireland
+939,2794.23,5/15/2021,Africa,Distributor,697,Viki Duddin,vduddinq2@theatlantic.com,Japan
+940,5800.7,11/15/2021,Africa,Direct sales,246,Talya Griswaite,tgriswaiteq3@ning.com,Greece
+941,6341.73,5/23/2021,Africa,Distributor,286,Cinnamon Salack,csalackq4@furl.net,Dominican Republic
+942,4482.33,5/6/2021,Europe,Online,309,Sutherlan Jeeks,sjeeksq5@godaddy.com,China
+943,441.05,7/1/2021,South America,Direct sales,942,Valentia Cheetam,vcheetamq6@mayoclinic.com,China
+944,9440.02,5/10/2021,North America,Direct sales,153,Emelen Broseke,ebrosekeq7@about.me,Colombia
+945,6578.25,8/7/2021,Asia,Direct sales,912,Sisely Dumphy,sdumphyq8@freewebs.com,Angola
+946,4375.88,6/29/2021,Europe,In-store,748,Ekaterina Branchet,ebranchetq9@ow.ly,Palestinian Territory
+947,9444.79,12/15/2021,North America,In-store,129,Mordy Tulk,mtulkqa@europa.eu,Indonesia
+948,5215.51,9/30/2021,North America,Online,37,Eleni Busk,ebuskqb@pbs.org,Indonesia
+949,8179.98,9/19/2021,North America,Distributor,847,Reed Hinckes,rhinckesqc@bloglovin.com,Czech Republic
+950,9867.98,3/20/2021,Asia,Online,432,Harwilll Weatherhogg,hweatherhoggqd@cisco.com,Philippines
+951,9426.05,1/16/2021,Europe,Distributor,397,Pincus Greenshields,pgreenshieldsqe@prweb.com,Philippines
+952,2650.55,9/21/2021,Africa,Online,263,Celestine Phinn,cphinnqf@homestead.com,Nigeria
+953,75.88,4/1/2021,Africa,In-store,63,Rosamund Van Hove,rvanqg@spiegel.de,China
+954,7919.23,10/14/2021,South America,Direct sales,558,Cassandre Oldroyde,coldroydeqh@usgs.gov,France
+955,7317.91,12/20/2021,North America,In-store,459,Patrick Tandy,ptandyqi@usnews.com,China
+956,979.1,8/19/2021,North America,In-store,649,Randene Sweeny,rsweenyqj@cocolog-nifty.com,Poland
+957,8377.45,8/26/2021,Europe,Online,533,Cristabel Andren,candrenqk@pen.io,Poland
+958,7075.68,1/28/2021,South America,Online,864,Kailey Balmforth,kbalmforthql@usgs.gov,Mauritania
+959,5694.72,10/24/2021,North America,In-store,535,Peirce Needs,pneedsqm@mysql.com,Slovenia
+960,5704.09,5/29/2021,Europe,Distributor,783,Colin Lindell,clindellqn@blogs.com,Indonesia
+961,4291.46,2/21/2021,Asia,Distributor,769,Mitchell Ripley,mripleyqo@mtv.com,Russia
+962,2879.48,10/20/2021,Asia,Direct sales,245,Harcourt Hundal,hhundalqp@smh.com.au,Japan
+963,3114.68,6/11/2021,Asia,Distributor,102,Winni Reichhardt,wreichhardtqq@51.la,China
+964,6780.18,9/17/2021,South America,In-store,215,Osbourn Trussler,otrusslerqr@wp.com,Indonesia
+965,4793.38,8/16/2021,South America,Distributor,724,Chelsea Elnough,celnoughqs@issuu.com,China
+966,3422.4,7/23/2021,Asia,Distributor,831,Roley Harbert,rharbertqt@icq.com,Indonesia
+967,8557.68,2/15/2021,Europe,Online,294,Yardley Zincke,yzinckequ@nature.com,Republic of the Congo
+968,3841.55,3/13/2021,Europe,Online,685,Rici Axton,raxtonqv@mozilla.com,Indonesia
+969,8521.71,9/25/2021,South America,Distributor,831,Solomon Sherwood,ssherwoodqw@scientificamerican.com,China
+970,1493.96,12/15/2021,Europe,Direct sales,231,Skye Da Costa,sdaqx@skype.com,Portugal
+971,2590.91,5/3/2021,Europe,Online,480,Bartholomeus Saffrin,bsaffrinqy@reddit.com,Mexico
+972,6203.86,3/4/2021,Africa,In-store,917,Alexia Lancashire,alancashireqz@alexa.com,Canada
+973,880.63,8/26/2021,North America,Online,364,Carlyn Crowe,ccrower0@yellowbook.com,Poland
+974,493.5,12/13/2021,North America,Direct sales,603,Ernst O'Flannery,eoflanneryr1@pbs.org,China
+975,3440.31,4/12/2021,North America,In-store,922,Randie Sturgeon,rsturgeonr2@so-net.ne.jp,Sweden
+976,6708.23,3/19/2021,Africa,Online,935,Kamilah Wheatland,kwheatlandr3@accuweather.com,Ghana
+977,8482.91,5/4/2021,Europe,In-store,723,Baxy Pirt,bpirtr4@hatena.ne.jp,Philippines
+978,6563.72,12/19/2021,Europe,In-store,419,Carlina Formoy,cformoyr5@printfriendly.com,Russia
+979,2833.4,11/22/2021,Africa,Distributor,336,Temp Bottoner,tbottonerr6@360.cn,China
+980,9478.67,11/23/2021,Asia,In-store,91,Lonny Galey,lgaleyr7@answers.com,China
+981,8492.74,7/1/2021,Africa,Direct sales,511,Willi Shimwell,wshimwellr8@shareasale.com,Vietnam
+982,253.76,7/7/2021,South America,Online,326,Carina Sabie,csabier9@t-online.de,Russia
+983,1400.46,9/2/2021,Africa,Distributor,805,Corinne Shirtliff,cshirtliffra@nature.com,China
+984,6602.98,7/10/2021,North America,Distributor,222,Gayelord Sagar,gsagarrb@privacy.gov.au,Philippines
+985,7383.25,1/17/2021,South America,Direct sales,412,Wenda Hogsden,whogsdenrc@sciencedirect.com,Pakistan
+986,9504.89,2/5/2021,South America,Online,145,Bamby Jayume,bjayumerd@cam.ac.uk,Sweden
+987,4487.9,8/5/2021,Europe,Distributor,432,Yardley Lewsey,ylewseyre@wunderground.com,Chad
+988,7156.92,1/8/2021,North America,Online,83,Oralie Bohea,obohearf@com.com,Indonesia
+989,7060.9,7/22/2021,North America,In-store,459,Samaria Chippin,schippinrg@umn.edu,China
+990,924.36,5/15/2021,Africa,Distributor,40,Selia Sollam,ssollamrh@ucoz.com,China
+991,3564.54,9/4/2021,Africa,Distributor,578,Trey Epinoy,tepinoyri@homestead.com,China
+992,7547.8,1/7/2021,North America,Online,352,Gerrilee Caban,gcabanrj@mediafire.com,Mexico
+993,374.57,10/13/2021,South America,Distributor,192,Livia Lyston,llystonrk@yellowpages.com,China
+994,1820.22,12/18/2021,Europe,Distributor,514,Neddy Berresford,nberresfordrl@wunderground.com,China
+995,2628.37,10/16/2021,North America,Direct sales,52,Mahala Illidge,millidgerm@123-reg.co.uk,China
+996,2495.02,10/5/2021,Africa,Direct sales,399,Dorothy Kittredge,dkittredgern@liveinternet.ru,China
+997,9575.61,9/28/2021,Europe,In-store,495,Emmalee De Filippo,edero@geocities.com,China
+998,4224.83,10/31/2021,North America,In-store,872,Jessa Beckhurst,jbeckhurstrp@newyorker.com,Poland
+999,4868.25,8/4/2021,North America,Online,367,Anna Brownlee,abrownleerq@guardian.co.uk,Indonesia
+1000,1493.04,7/28/2021,South America,Distributor,187,Dore Baudts,dbaudtsrr@quantcast.com,France
