@@ -1005,7 +1005,7 @@ async def generate_pdf_report(title, content, pdf_path, style):
 
 @app.get("/reports/{report_id}")
 async def get_report(report_id: str):
-    pdf_path = f"static/pdfs/{report_id}.pdf"
+    pdf_path = f"tmp/pdfs/{report_id}.pdf"
     if not os.path.exists(pdf_path):
         raise HTTPException(status_code=404, detail="Report not found")
     
