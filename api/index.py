@@ -1014,7 +1014,7 @@ async def analyze_data(session_id: str):
         session_data["visualizations"] = visualizations
         session_data["recommendations"] = recommendations
         
-        with open(os.path.join("static/uploads", f"{session_id}_info.json"), "w") as f:
+        with open(os.path.join("tmp/uploads", f"{session_id}_info.json"), "w") as f:
             json.dump(session_data, f, cls=NumpyEncoder)
         
         return {
