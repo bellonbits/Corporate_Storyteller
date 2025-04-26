@@ -17,6 +17,7 @@ from fpdf import FPDF
 import io
 import textwrap
 import matplotlib.ticker as mticker
+import traceback
 
 # Add corporate branding colors
 CORPORATE_COLORS = {
@@ -51,6 +52,8 @@ app = FastAPI(title="Corporate Data Storyteller", description="Transform busines
 os.makedirs("static/uploads", exist_ok=True)
 os.makedirs("static/visualizations", exist_ok=True)
 os.makedirs("static/pdfs", exist_ok=True)
+os.makedirs("tmp/uploads", exist_ok=True)  # Added missing directory
+os.makedirs("tmp/pdfs", exist_ok=True)  # Added missing directory
 
 # Mount static files directory
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -159,8 +162,10 @@ class CorporateReportPDF(FPDF):
         self.ln(5)
         
     def add_image(self, img_path, w=180):
-        self.image(img_path, x=15, y=None, w=w)
-        self.ln(5)
+        # Check if image exists to prevent errors
+        if os.path.exists(img_path):
+            self.image(img_path, x=15, y=None, w=w)
+            self.ln(5)
         
     def image_caption(self, caption):
         self.set_font("Arial", "I", 9)
@@ -516,198 +521,188 @@ class CorporateDataAnalyzer:
         session_dir = os.path.join(base_path, session_id)
         os.makedirs(session_dir, exist_ok=True)
         
-        # 1. Key Metrics Overview (clean bar chart)
-        numeric_cols = self.df.select_dtypes(include=[np.number]).columns
-        if len(numeric_cols) >= 3:
-            key_metrics = numeric_cols[:3]  # Focus on top 3 metrics
-            
-            plt.figure(figsize=(10, 6))
-            avg_values = [self.df[col].mean() for col in key_metrics]
-            
-            # Create horizontal bar chart
-            bars = plt.barh(key_metrics, avg_values, color=CORPORATE_COLORS["primary"])
-            
-            # Clean design
-            plt.title("Key Metrics Overview", fontsize=14, fontweight='bold')
-            plt.grid(axis='x', linestyle='--', alpha=0.7)
-            plt.grid(axis='y', visible=False)
-            
-            # Add values to end of bars
-            for i, v in enumerate(avg_values):
-                plt.text(v, i, f" {v:.1f}", va='center', fontweight='bold')
-            
-            plt.tight_layout()
-            viz_path = os.path.join(session_dir, "key_metrics.png")
-            plt.savefig(viz_path, dpi=300, bbox_inches="tight", facecolor='white')
-            plt.close()
-            
-            viz_paths.append({
-                "path": viz_path,
-                "title": "Key Business Metrics",
-                "description": "Overview of the primary performance indicators in the dataset."
-            })
-        
-        # 2. Trend Analysis (if time data available)
-        date_cols = [col for col in self.df.columns if any(term in col.lower() for term in ['date', 'time', 'year', 'month', 'day'])]
-        if date_cols and len(numeric_cols) > 0:
-            try:
-                date_col = date_cols[0]
-                self.df['temp_date'] = pd.to_datetime(self.df[date_col], errors='coerce')
+        try:
+            # 1. Key Metrics Overview (clean bar chart)
+            numeric_cols = self.df.select_dtypes(include=[np.number]).columns
+            if len(numeric_cols) >= 3:
+                key_metrics = numeric_cols[:3]  # Focus on top 3 metrics
                 
-                # Select most relevant metric
-                metric_col = numeric_cols[0]
+                plt.figure(figsize=(10, 6))
+                avg_values = [self.df[col].mean() for col in key_metrics]
                 
-                plt.figure(figsize=(12, 6))
+                # Create horizontal bar chart
+                bars = plt.barh(key_metrics, avg_values, color=CORPORATE_COLORS["primary"])
                 
-                # Prepare data
-                trend_df = self.df.dropna(subset=['temp_date', metric_col])
-                trend_df = trend_df.sort_values('temp_date')
+                # Clean design
+                plt.title("Key Metrics Overview", fontsize=14, fontweight='bold')
+                plt.grid(axis='x', linestyle='--', alpha=0.7)
+                plt.grid(axis='y', visible=False)
                 
-                if len(trend_df) > 1:
-                    # Resample if we have enough data points
-                    if len(trend_df) > 20:
-                        # Group by appropriate time period
-                        time_diff = (trend_df['temp_date'].max() - trend_df['temp_date'].min()).days
-                        
-                        if time_diff > 365:
-                            trend_df = trend_df.set_index('temp_date')
-                            trend_data = trend_df[metric_col].resample('M').mean().reset_index()
-                            date_format = '%b %Y'
-                        elif time_diff > 90:
-                            trend_df = trend_df.set_index('temp_date')
-                            trend_data = trend_df[metric_col].resample('W').mean().reset_index()
-                            date_format = '%d %b'
+                # Add values to end of bars
+                for i, v in enumerate(avg_values):
+                    plt.text(v, i, f" {v:.1f}", va='center', fontweight='bold')
+                
+                plt.tight_layout()
+                viz_path = os.path.join(session_dir, "key_metrics.png")
+                plt.savefig(viz_path, dpi=300, bbox_inches="tight", facecolor='white')
+                plt.close()
+                
+                viz_paths.append({
+                    "path": viz_path,
+                    "title": "Key Business Metrics",
+                    "description": "Overview of the primary performance indicators in the dataset."
+                })
+            
+            # 2. Trend Analysis (if time data available)
+            date_cols = [col for col in self.df.columns if any(term in col.lower() for term in ['date', 'time', 'year', 'month', 'day'])]
+            if date_cols and len(numeric_cols) > 0:
+                try:
+                    date_col = date_cols[0]
+                    self.df['temp_date'] = pd.to_datetime(self.df[date_col], errors='coerce')
+                    
+                    # Select most relevant metric
+                    metric_col = numeric_cols[0]
+                    
+                    plt.figure(figsize=(12, 6))
+                    
+                    # Prepare data
+                    trend_df = self.df.dropna(subset=['temp_date', metric_col])
+                    trend_df = trend_df.sort_values('temp_date')
+                    
+                    if len(trend_df) > 1:
+                        # Resample if we have enough data points
+                        if len(trend_df) > 20:
+                            # Group by appropriate time period
+                            time_diff = (trend_df['temp_date'].max() - trend_df['temp_date'].min()).days
+                            
+                            if time_diff > 365:
+                                trend_df = trend_df.set_index('temp_date')
+                                trend_data = trend_df[metric_col].resample('M').mean().reset_index()
+                                date_format = '%b %Y'
+                            elif time_diff > 90:
+                                trend_df = trend_df.set_index('temp_date')
+                                trend_data = trend_df[metric_col].resample('W').mean().reset_index()
+                                date_format = '%d %b'
+                            else:
+                                trend_data = trend_df
+                                date_format = '%d %b'
+                                
+                            if 'temp_date' not in trend_data.columns:
+                                trend_data = trend_data.rename(columns={'index': 'temp_date'})
                         else:
                             trend_data = trend_df
                             date_format = '%d %b'
                             
-                        if 'temp_date' not in trend_data.columns:
-                            trend_data = trend_data.rename(columns={'index': 'temp_date'})
-                    else:
-                        trend_data = trend_df
-                        date_format = '%d %b'
+                        # Create line chart with clear annotations
+                        plt.plot(trend_data['temp_date'], trend_data[metric_col], 
+                                 marker='o', linestyle='-', linewidth=2, 
+                                 color=CORPORATE_COLORS["primary"])
                         
-                    # Create line chart with clear annotations
-                    plt.plot(trend_data['temp_date'], trend_data[metric_col], 
-                             marker='o', linestyle='-', linewidth=2, 
-                             color=CORPORATE_COLORS["primary"])
-                    
-                    # Add trend line
-                    z = np.polyfit(range(len(trend_data)), trend_data[metric_col], 1)
-                    p = np.poly1d(z)
-                    plt.plot(trend_data['temp_date'], p(range(len(trend_data))), 
-                             linestyle='--', color=CORPORATE_COLORS["secondary"], 
-                             alpha=0.8, linewidth=1.5)
-                    
-                    # Annotations
-                    # Mark start and end points
-                    plt.plot(trend_data['temp_date'].iloc[0], trend_data[metric_col].iloc[0], 
-                             'o', markersize=8, color=CORPORATE_COLORS["neutral"])
-                    plt.plot(trend_data['temp_date'].iloc[-1], trend_data[metric_col].iloc[-1], 
-                             'o', markersize=8, color=CORPORATE_COLORS["accent"])
-                    
-                    # Add start and end labels
-                    plt.annotate(f'{trend_data[metric_col].iloc[0]:.1f}', 
-                                 (trend_data['temp_date'].iloc[0], trend_data[metric_col].iloc[0]),
-                                 textcoords="offset points", xytext=(-15,-15), 
-                                 ha='center', fontweight='bold', fontsize=9)
-                    plt.annotate(f'{trend_data[metric_col].iloc[-1]:.1f}', 
-                                 (trend_data['temp_date'].iloc[-1], trend_data[metric_col].iloc[-1]),
-                                 textcoords="offset points", xytext=(15,-15), 
-                                 ha='center', fontweight='bold', fontsize=9)
-                    
-                    # Calculate change percentage
-                    pct_change = ((trend_data[metric_col].iloc[-1] - trend_data[metric_col].iloc[0]) / 
-                                  trend_data[metric_col].iloc[0] * 100)
-                    
-                    # Style and clean up
-                    plt.title(f"{metric_col} Trend Analysis", fontsize=14, fontweight='bold')
-                    plt.xlabel('')
-                    plt.ylabel(metric_col)
-                    plt.grid(True, linestyle='--', alpha=0.7)
-                    
-                    # Format x-axis date labels
-                    plt.gcf().autofmt_xdate()
-                    plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter(date_format))
+                        # Add trend line
+                        z = np.polyfit(range(len(trend_data)), trend_data[metric_col], 1)
+                        p = np.poly1d(z)
+                        plt.plot(trend_data['temp_date'], p(range(len(trend_data))), 
+                                 linestyle='--', color=CORPORATE_COLORS["secondary"], 
+                                 alpha=0.8, linewidth=1.5)
+                        
+                        # Annotations
+                        # Mark start and end points
+                        plt.plot(trend_data['temp_date'].iloc[0], trend_data[metric_col].iloc[0], 
+                                 'o', markersize=8, color=CORPORATE_COLORS["neutral"])
+                        plt.plot(trend_data['temp_date'].iloc[-1], trend_data[metric_col].iloc[-1], 
+                                 'o', markersize=8, color=CORPORATE_COLORS["accent"])
+                        
+                        # Add start and end labels
+                        plt.annotate(f'{trend_data[metric_col].iloc[0]:.1f}', 
+                                     (trend_data['temp_date'].iloc[0], trend_data[metric_col].iloc[0]),
+                                     textcoords="offset points", xytext=(-15,-15), 
+                                     ha='center', fontweight='bold', fontsize=9)
+                        plt.annotate(f'{trend_data[metric_col].iloc[-1]:.1f}', 
+                                     (trend_data['temp_date'].iloc[-1], trend_data[metric_col].iloc[-1]),
+                                     textcoords="offset points", xytext=(15,-15), 
+                                     ha='center', fontweight='bold', fontsize=9)
+                        
+                        # Calculate change percentage
+                        pct_change = ((trend_data[metric_col].iloc[-1] - trend_data[metric_col].iloc[0]) / 
+                                      trend_data[metric_col].iloc[0] * 100) if trend_data[metric_col].iloc[0] != 0 else 0
+                        
+                        # Style and clean up
+                        plt.title(f"{metric_col} Trend Analysis", fontsize=14, fontweight='bold')
+                        plt.xlabel('')
+                        plt.ylabel(metric_col)
+                        plt.grid(True, linestyle='--', alpha=0.7)
+                        
+                        # Format x-axis date labels
+                        plt.gcf().autofmt_xdate()
+                        plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter(date_format))
 
-                    # Add insight annotation
-                    if pct_change > 0:
-                        insight_text = f"↑ {pct_change:.1f}% increase"
-                        insight_color = CORPORATE_COLORS["success"]
-                    else:
-                        insight_text = f"↓ {abs(pct_change):.1f}% decrease"
-                        insight_color = CORPORATE_COLORS["danger"]
+                        # Add insight annotation
+                        if pct_change > 0:
+                            insight_text = f"↑ {pct_change:.1f}% increase"
+                            insight_color = CORPORATE_COLORS["success"]
+                        else:
+                            insight_text = f"↓ {abs(pct_change):.1f}% decrease"
+                            insight_color = CORPORATE_COLORS["danger"]
+                            
+                        plt.figtext(0.5, 0.01, insight_text, ha="center", fontsize=12, 
+                                    bbox={"facecolor":insight_color, "alpha":0.2, "pad":5},
+                                    fontweight='bold')
                         
-                    plt.figtext(0.5, 0.01, insight_text, ha="center", fontsize=12, 
-                                bbox={"facecolor":insight_color, "alpha":0.2, "pad":5},
-                                fontweight='bold')
-                    
-                    plt.tight_layout()
-                    viz_path = os.path.join(session_dir, "trend_analysis.png")
-                    plt.savefig(viz_path, dpi=300, bbox_inches="tight", facecolor='white')
-                    plt.close()
-                    
-                    viz_paths.append({
-                        "path": viz_path,
-                        "title": f"{metric_col} Trend Over Time",
-                        "description": f"Analysis of {metric_col} showing a {insight_text} over the period."
-                    })
+                        plt.tight_layout()
+                        viz_path = os.path.join(session_dir, "trend_analysis.png")
+                        plt.savefig(viz_path, dpi=300, bbox_inches="tight", facecolor='white')
+                        plt.close()
+
+                        viz_paths.append({
+                            "path": viz_path,
+                            "title": f"{metric_col} Trend Over Time",
+                            "description": f"Analysis showing a {abs(pct_change):.1f}% {'increase' if pct_change > 0 else 'decrease'} in {metric_col} over the observed time period."
+                        })
                 
                 # Remove temp date column
                 self.df.drop('temp_date', axis=1, inplace=True, errors='ignore')
                 
             except Exception as e:
-                print(f"Error creating trend visualization: {e}")
-        
-        # 3. Segment Comparison (if categorical variables exist)
-        categorical_cols = self.df.select_dtypes(include=["object"]).columns
-        if len(categorical_cols) > 0 and len(numeric_cols) > 0:
-            try:
-                # Find categorical column with appropriate cardinality
-                # Find categorical column with appropriate cardinality
+                print(f"Error in trend analysis: {str(e)}")
+                traceback.print_exc()
+            
+            # 3. Segment Comparison (if categorical data available)
+            categorical_cols = self.df.select_dtypes(include=["object"]).columns
+            if len(categorical_cols) > 0 and len(numeric_cols) > 0:
                 segment_col = None
                 for col in categorical_cols:
                     n_unique = self.df[col].nunique()
-                    if 2 <= n_unique <= 10:  # Reasonable number of segments
+                    if 2 <= n_unique <= 10:  # Find a good segmentation column
                         segment_col = col
                         break
+                
+                if segment_col:
+                    try:
+                        plt.figure(figsize=(12, 7))
+                        metric_col = numeric_cols[0]
                         
-                if segment_col and len(numeric_cols) > 0:
-                    metric_col = numeric_cols[0]
-                    
-                    # Get segment data
-                    segment_data = self.df.groupby(segment_col)[metric_col].mean().sort_values(ascending=False)
-                    
-                    if len(segment_data) > 1:
-                        plt.figure(figsize=(10, 6))
+                        # Prepare data
+                        segment_data = self.df.groupby(segment_col)[metric_col].agg(['mean', 'count'])
+                        segment_data = segment_data.sort_values('mean', ascending=False)
                         
-                        # Create horizontal bar chart with corporate colors
-                        bars = plt.barh(segment_data.index, segment_data.values,
+                        # Calculate percentages for annotations
+                        total = segment_data['count'].sum()
+                        segment_data['pct'] = segment_data['count'] / total * 100
+                        
+                        # Plot horizontal bar chart
+                        bars = plt.barh(segment_data.index, segment_data['mean'], 
                                         color=CORPORATE_COLORS["secondary"], alpha=0.7)
                         
-                        # Highlight best and worst performers
-                        if len(segment_data) >= 2:
-                            bars[0].set_color(CORPORATE_COLORS["success"])
-                            bars[-1].set_color(CORPORATE_COLORS["danger"])
+                        # Add bar labels
+                        for i, (value, pct) in enumerate(zip(segment_data['mean'], segment_data['pct'])):
+                            plt.text(value, i, f" {value:.1f} ({pct:.1f}%)", va='center', fontweight='bold')
                         
-                        # Add data labels
-                        for i, v in enumerate(segment_data.values):
-                            plt.text(v, i, f" {v:.1f}", va='center', fontweight='bold')
-                        
-                        # Clean design
+                        # Styling
                         plt.title(f"{metric_col} by {segment_col}", fontsize=14, fontweight='bold')
                         plt.xlabel(metric_col)
+                        plt.ylabel('')
                         plt.grid(axis='x', linestyle='--', alpha=0.7)
                         plt.grid(axis='y', visible=False)
-                        
-                        # Calculate performance gap
-                        if len(segment_data) >= 2:
-                            perf_gap = segment_data.max() - segment_data.min()
-                            perf_gap_pct = (perf_gap / segment_data.min()) * 100
-                            
-                            gap_text = f"Performance gap: {perf_gap:.1f} ({perf_gap_pct:.1f}%)"
-                            plt.figtext(0.5, 0.01, gap_text, ha="center", fontsize=10, 
-                                       bbox={"facecolor":"lightgray", "alpha":0.2, "pad":5})
                         
                         plt.tight_layout()
                         viz_path = os.path.join(session_dir, "segment_comparison.png")
@@ -716,404 +711,303 @@ class CorporateDataAnalyzer:
                         
                         viz_paths.append({
                             "path": viz_path,
-                            "title": f"{metric_col} Performance by {segment_col}",
-                            "description": f"Comparison of {metric_col} across different {segment_col} segments."
+                            "title": f"Performance by {segment_col}",
+                            "description": f"Comparison of {metric_col} across different {segment_col} segments, highlighting performance variations."
                         })
-            except Exception as e:
-                print(f"Error creating segment visualization: {e}")
-        
-        # 4. Distribution Analysis
-        if len(numeric_cols) > 0:
-            try:
-                # Choose most relevant metric
-                metric_col = numeric_cols[0]
-                
-                plt.figure(figsize=(10, 6))
-                
-                # Create histogram with KDE
-                sns.histplot(self.df[metric_col].dropna(), kde=True, 
-                            color=CORPORATE_COLORS["primary"], alpha=0.6)
-                
-                # Add reference lines
-                mean_val = self.df[metric_col].mean()
-                median_val = self.df[metric_col].median()
-                
-                plt.axvline(mean_val, color=CORPORATE_COLORS["accent"], linestyle='--', 
-                           linewidth=2, label=f'Mean: {mean_val:.2f}')
-                plt.axvline(median_val, color=CORPORATE_COLORS["secondary"], linestyle='-', 
-                           linewidth=2, label=f'Median: {median_val:.2f}')
-                
-                # Add annotations
-                skew = self.df[metric_col].skew()
-                skew_text = "Positively Skewed" if skew > 0.5 else "Negatively Skewed" if skew < -0.5 else "Normally Distributed"
-                
-                # Style and clean up
-                plt.title(f"{metric_col} Distribution Analysis", fontsize=14, fontweight='bold')
-                plt.xlabel(metric_col)
-                plt.ylabel('Frequency')
-                plt.grid(True, linestyle='--', alpha=0.7)
-                plt.legend()
-                
-                plt.figtext(0.5, 0.01, f"Distribution: {skew_text} (Skew: {skew:.2f})", 
-                           ha="center", fontsize=10, 
-                           bbox={"facecolor":"lightgray", "alpha":0.2, "pad":5})
-                
-                plt.tight_layout()
-                viz_path = os.path.join(session_dir, "distribution_analysis.png")
-                plt.savefig(viz_path, dpi=300, bbox_inches="tight", facecolor='white')
-                plt.close()
-                
-                viz_paths.append({
-                    "path": viz_path,
-                    "title": f"{metric_col} Distribution",
-                    "description": f"Analysis of the {metric_col} distribution pattern showing {skew_text.lower()} characteristics."
-                })
-                
-            except Exception as e:
-                print(f"Error creating distribution visualization: {e}")
-        
-        # 5. Correlation Heatmap (if multiple numeric columns)
-        if len(numeric_cols) >= 3:
-            try:
-                # Select top numeric columns
-                selected_cols = numeric_cols[:5]  # Limit to 5 columns
-                
-                # Calculate correlation matrix
-                corr_matrix = self.df[selected_cols].corr()
-                
-                plt.figure(figsize=(10, 8))
-                
-                # Create heatmap
-                sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, 
-                           fmt='.2f', linewidths=0.5, cbar_kws={"shrink": .8})
-                
-                # Style and clean up
-                plt.title("Correlation Analysis", fontsize=14, fontweight='bold')
-                plt.tight_layout()
-                
-                viz_path = os.path.join(session_dir, "correlation_analysis.png")
-                plt.savefig(viz_path, dpi=300, bbox_inches="tight", facecolor='white')
-                plt.close()
-                
-                # Find strongest correlations
-                corr_unstack = corr_matrix.unstack()
-                # Remove self-correlations
-                corr_unstack = corr_unstack[corr_unstack < 1.0]
-                top_corr = corr_unstack.abs().sort_values(ascending=False)[:3]
-                
-                corr_insight = "Key relationships: "
-                for idx, val in top_corr.items():
-                    if idx[0] != idx[1]:  # Skip self-correlations
-                        direction = "positive" if val > 0 else "negative"
-                        corr_insight += f"{idx[0]} & {idx[1]} ({direction}, {abs(val):.2f}), "
-                
-                corr_insight = corr_insight.rstrip(", ")
-                
-                viz_paths.append({
-                    "path": viz_path,
-                    "title": "Correlation Matrix",
-                    "description": corr_insight
-                })
-                
-            except Exception as e:
-                print(f"Error creating correlation visualization: {e}")
-        
+                    except Exception as e:
+                        print(f"Error in segment comparison: {str(e)}")
+                        traceback.print_exc()
+            
+            # 4. Distribution Analysis
+            if len(numeric_cols) > 0:
+                try:
+                    plt.figure(figsize=(10, 6))
+                    metric_col = numeric_cols[0]
+                    
+                    # Create KDE plot with histogram
+                    sns.histplot(self.df[metric_col].dropna(), kde=True, color=CORPORATE_COLORS["primary"])
+                    
+                    # Add mean and median lines
+                    mean_val = self.df[metric_col].mean()
+                    median_val = self.df[metric_col].median()
+                    
+                    plt.axvline(mean_val, color=CORPORATE_COLORS["accent"], linestyle='--', linewidth=2)
+                    plt.axvline(median_val, color=CORPORATE_COLORS["neutral"], linestyle=':', linewidth=2)
+                    
+                    # Add legend
+                    plt.legend(['Distribution', f'Mean: {mean_val:.2f}', f'Median: {median_val:.2f}'])
+                    
+                    # Style
+                    plt.title(f"Distribution of {metric_col}", fontsize=14, fontweight='bold')
+                    plt.grid(True, linestyle='--', alpha=0.7)
+                    
+                    plt.tight_layout()
+                    viz_path = os.path.join(session_dir, "distribution_analysis.png")
+                    plt.savefig(viz_path, dpi=300, bbox_inches="tight", facecolor='white')
+                    plt.close()
+                    
+                    viz_paths.append({
+                        "path": viz_path,
+                        "title": f"Distribution Analysis of {metric_col}",
+                        "description": f"Statistical distribution showing the spread and central tendency of {metric_col} values."
+                    })
+                except Exception as e:
+                    print(f"Error in distribution analysis: {str(e)}")
+                    traceback.print_exc()
+            
+            # 5. Correlation Heatmap (if multiple numeric columns)
+            if len(numeric_cols) >= 3:
+                try:
+                    plt.figure(figsize=(10, 8))
+                    
+                    # Select top metrics
+                    selected_cols = numeric_cols[:5]  # Limit to top 5 for readability
+                    corr_matrix = self.df[selected_cols].corr()
+                    
+                    # Create heatmap
+                    sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, 
+                                linewidths=0.5, cbar_kws={"shrink": 0.8})
+                    
+                    plt.title("Correlation Between Key Metrics", fontsize=14, fontweight='bold')
+                    plt.tight_layout()
+                    
+                    viz_path = os.path.join(session_dir, "correlation_heatmap.png")
+                    plt.savefig(viz_path, dpi=300, bbox_inches="tight", facecolor='white')
+                    plt.close()
+                    
+                    viz_paths.append({
+                        "path": viz_path,
+                        "title": "Metric Correlation Analysis",
+                        "description": "Visualization showing relationships between key business metrics, highlighting potential interdependencies."
+                    })
+                except Exception as e:
+                    print(f"Error in correlation analysis: {str(e)}")
+                    traceback.print_exc()
+                    
+        except Exception as e:
+            print(f"Error creating visualizations: {str(e)}")
+            traceback.print_exc()
+            
         self.visualizations = viz_paths
         return viz_paths
 
-# Function to generate business insights using Groq LLM
-async def generate_llm_insights(data_summary, business_context, corporate_style, audience):
-    """Generate natural language insights from data using LLM"""
-    headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
-        "Content-Type": "application/json"
-    }
-    
-    # Format the data summary for better LLM processing
-    insights_formatted = json.dumps(data_summary, indent=2, cls=NumpyEncoder)
-    
-    # Get style information
-    style_info = CORPORATE_STYLES.get(corporate_style, CORPORATE_STYLES["executive"])
-    
-    prompt = f"""
-    You are an expert business analyst tasked with creating a data-driven business report.
-    
-    ## Business Context
-    {business_context}
-    
-    ## Audience
-    {audience}
-    
-    ## Presentation Style
-    {style_info['name']}: {style_info['style']}
-    Tone: {style_info['tone']}
-    
-    ## Data Analysis Results
-    {insights_formatted}
-    
-    Based on this information, create a professional business report with the following sections:
-    
-    1. Executive Summary - A brief overview of the key findings (1 paragraph)
-    2. Key Insights - 3-5 bullet points highlighting the most important insights
-    3. Detailed Analysis - 2-3 paragraphs explaining the data patterns and business implications
-    4. Recommendations - 3-5 actionable recommendations based on the data
-    5. Next Steps - Suggested follow-up actions (1 paragraph)
-    
-    Format your report in a professional, {style_info['tone']} style suitable for {audience}.
-    Focus on business impact and actionable insights rather than technical details.
-    """
-    
-    payload = {
-        "model": GROQ_MODEL,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.3,
-        "max_tokens": 2000
-    }
-    
-    try:
-        response = requests.post(GROQ_API_URL, headers=headers, json=payload)
-        response.raise_for_status()
-        response_data = response.json()
-        report_content = response_data["choices"][0]["message"]["content"]
-        return report_content
-    except Exception as e:
-        print(f"Error generating insights with LLM: {e}")
-        # Fallback basic report if LLM fails
-        return generate_fallback_report(data_summary, business_context, style_info, audience)
-
-def generate_fallback_report(data_summary, business_context, style_info, audience):
-    """Generate a basic report if the LLM call fails"""
-    report = f"""
-    # {style_info['name']} Report
-    
-    ## Executive Summary
-    {style_info['intro']}
-    
-    ## Key Insights
-    """
-    
-    # Extract basic insights
-    try:
-        # Get data summary
-        summary = next((item for item in data_summary if item["type"] == "data_summary"), None)
-        if summary:
-            report += f"* Analyzed {summary['content']['rows']} data points across {summary['content']['columns']} variables\n"
-        
-        # Get growth insights
-        growth = next((item for item in data_summary if item["type"] == "growth_analysis"), None)
-        if growth and growth["content"]:
-            for metric, trend in growth["content"].items():
-                direction = "increase" if trend["direction"] == "increasing" else "decrease" if trend["direction"] == "decreasing" else "stability"
-                report += f"* {metric} shows {direction} of {abs(trend['pct_change']):.1f}%\n"
-        
-        # Get segment insights
-        segments = next((item for item in data_summary if item["type"] == "segment_comparison"), None)
-        if segments and segments["content"]:
-            seg = segments["content"]
-            report += f"* {seg['best_segment']} outperforms {seg['worst_segment']} by {seg['performance_gap']:.1f} in {seg['metric_analyzed']}\n"
-    except:
-        report += "* The data shows several patterns that warrant further investigation\n"
-        report += "* Multiple metrics indicate opportunities for business optimization\n"
-    
-    # Add recommendations
-    report += """
-    ## Recommendations
-    * Conduct a deeper analysis into the key factors driving performance
-    * Develop targeted strategies for underperforming segments
-    * Implement regular monitoring of key metrics to track progress
-    
-    ## Next Steps
-    Based on these findings, we recommend scheduling a follow-up meeting to discuss implementation strategies and establish a timeline for action.
-    """
-    
-    return report
-
-@app.get("/", response_class=HTMLResponse)
-async def root(request: Request):
+# API Routes and Endpoints would continue here for the FastAPI application
+@app.get("/")
+async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-@app.post("/upload/", response_model=dict)
-async def upload_file(background_tasks: BackgroundTasks, file: UploadFile = File(...)):
-    """Upload and process a data file"""
-    # Create a unique session ID
+@app.post("/upload/")
+async def upload_file(
+    background_tasks: BackgroundTasks,
+    file: UploadFile = File(...),
+    business_context: str = Form(None)
+):
     session_id = str(uuid.uuid4())
+    file_path = f"tmp/uploads/{session_id}_{file.filename}"
     
-    # Save the uploaded file
-    file_location = os.path.join("tmp/uploads", f"{session_id}_{file.filename}")
-    with open(file_location, "wb") as f:
-        contents = await file.read()
-        f.write(contents)
-    
-    # Process the file based on extension
     try:
+        # Save uploaded file
+        with open(file_path, "wb") as buffer:
+            buffer.write(await file.read())
+        
+        # Read data based on file type
         if file.filename.endswith('.csv'):
-            df = pd.read_csv(file_location)
-        elif file.filename.endswith(('.xls', '.xlsx')):
-            df = pd.read_excel(file_location)
-        elif file.filename.endswith('.json'):
-            df = pd.read_json(file_location)
-        else:
-            raise HTTPException(status_code=400, detail="Unsupported file format")
-        
-        # Initial basic data analysis
-        data_preview = df.head(5).to_dict(orient="records")
-        columns = df.columns.tolist()
-        row_count = len(df)
-        
-        # Save dataset info to session
-        session_data = {
-            "file_path": file_location,
-            "columns": columns,
-            "row_count": row_count,
-            "created_at": datetime.datetime.now().isoformat()
-        }
-        
-        # Save session data
-        with open(os.path.join("tmp/uploads", f"{session_id}_info.json"), "w") as f:
-            json.dump(session_data, f, cls=NumpyEncoder)
-        
-        return {
-            "status": "success",
-            "session_id": session_id,
-            "file_name": file.filename, 
-            "columns": columns,
-            "row_count": row_count,
-            "preview": data_preview
-        }
-    
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error processing file: {str(e)}")
-
-@app.post("/analyze/{session_id}", response_model=dict)
-async def analyze_data(session_id: str):
-    """Perform basic analysis on the uploaded data"""
-    try:
-        # Load session data
-        with open(os.path.join("tmp/uploads", f"{session_id}_info.json"), "r") as f:
-            session_data = json.load(f)
-        
-        file_path = session_data["file_path"]
-        
-        # Load the dataframe
-        if file_path.endswith('.csv'):
             df = pd.read_csv(file_path)
-        elif file_path.endswith(('.xls', '.xlsx')):
+        elif file.filename.endswith(('.xls', '.xlsx')):
             df = pd.read_excel(file_path)
-        elif file_path.endswith('.json'):
-            df = pd.read_json(file_path)
+        else:
+            raise HTTPException(status_code=400, detail="Unsupported file format. Please upload CSV or Excel files.")
         
-        # Perform analysis
-        analyzer = CorporateDataAnalyzer(df)
+        # Store data in session file for later use
+        session_data_path = f"tmp/uploads/{session_id}_data.csv"
+        df.to_csv(session_data_path, index=False)
+        
+        # Run initial analysis
+        analyzer = CorporateDataAnalyzer(df, business_context)
         insights = analyzer.generate_business_insights()
         visualizations = analyzer.create_corporate_visualizations(session_id=session_id)
-        recommendations = analyzer.recommendations
         
-        # Update session data
-        session_data["analysis_complete"] = True
-        session_data["insights"] = insights
-        session_data["visualizations"] = visualizations
-        session_data["recommendations"] = recommendations
-        
-        with open(os.path.join("tmp/uploads", f"{session_id}_info.json"), "w") as f:
-            json.dump(session_data, f, cls=NumpyEncoder)
-        
+        # Return session ID and initial analysis
         return {
-            "status": "success",
+            "session_id": session_id,
+            "filename": file.filename,
+            "rows": len(df),
+            "columns": len(df.columns),
+            "preview": df.head(5).to_dict(orient="records"),
             "insights": insights,
-            "visualizations": visualizations,
-            "recommendations": recommendations
+            "recommendations": analyzer.recommendations,
+            "visualizations": [{"url": f"/static/visualizations/{session_id}/{os.path.basename(viz['path'])}", 
+                              "title": viz["title"], 
+                              "description": viz["description"]} 
+                             for viz in visualizations]
+        }
+    except Exception as e:
+        # Clean up on error
+        if os.path.exists(file_path):
+            os.remove(file_path)
+        raise HTTPException(status_code=500, detail=f"Error processing file: {str(e)}")
+
+@app.post("/generate-story/")
+async def generate_story(request: StoryGenerationRequest):
+    """Generate a business data story based on insights and context"""
+    try:
+        # Validate inputs
+        if request.corporate_style not in CORPORATE_STYLES:
+            raise HTTPException(status_code=400, detail="Invalid corporate style")
+        
+        style_info = CORPORATE_STYLES[request.corporate_style]
+        
+        # Prepare context for LLM
+        prompt = f"""
+        You are an expert business analyst and data storyteller. Create a concise, professional business report 
+        based on the following context:
+        
+        BUSINESS CONTEXT: {request.business_context}
+        
+        TARGET AUDIENCE: {request.audience}
+        
+        STYLE: {style_info['style']}
+        
+        TONE: {style_info['tone']}
+        
+        The report should include:
+        1. Executive summary (2-3 paragraphs)
+        2. Key insights (3-5 bullet points)
+        3. Business implications (1-2 paragraphs)
+        4. Recommendations (3-5 bullet points)
+        5. Next steps (1 paragraph)
+        
+        Make the content specific, actionable, and valuable to business stakeholders.
+        """
+        
+        # Call LLM (Groq) for generation
+        headers = {
+            "Authorization": f"Bearer {GROQ_API_KEY}",
+            "Content-Type": "application/json"
         }
         
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error analyzing data: {str(e)}")
-
-@app.post("/generate-story/{session_id}", response_model=StoryResponse)
-async def generate_story(session_id: str, request: StoryGenerationRequest):
-    """Generate a data story with corporate styling"""
-    try:
-        # Load session data
-        with open(os.path.join("tmp/uploads", f"{session_id}_info.json"), "r") as f:
-            session_data = json.load(f)
+        data = {
+            "model": GROQ_MODEL,
+            "messages": [
+                {"role": "system", "content": "You are an expert business analyst and data storyteller."},
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": 0.7,
+            "max_tokens": 1500
+        }
         
-        if not session_data.get("analysis_complete", False):
-            raise HTTPException(status_code=400, detail="Analysis not completed. Run analysis first.")
+        response = requests.post(GROQ_API_URL, headers=headers, json=data)
+        if response.status_code != 200:
+            raise HTTPException(status_code=500, detail=f"LLM API error: {response.text}")
         
-        # Generate report content with LLM
-        insights = session_data.get("insights", [])
-        visualizations = session_data.get("visualizations", [])
-        recommendations = session_data.get("recommendations", [])
+        story_content = response.json()["choices"][0]["message"]["content"]
         
-        # Generate report content
-        report_content = await generate_llm_insights(
-            insights, 
-            request.business_context,
-            request.corporate_style,
-            request.audience
+        # Create a report ID and title
+        report_id = str(uuid.uuid4())
+        title = request.title if request.title else f"{style_info['name']} Report"
+        
+        # Generate PDF
+        pdf_path = f"tmp/pdfs/{report_id}.pdf"
+        await generate_pdf_report(title, story_content, pdf_path, request.corporate_style)
+        
+        return StoryResponse(
+            report_id=report_id,
+            title=title,
+            preview=story_content[:300] + "...",
+            pdf_url=f"/tmp/pdfs/{report_id}.pdf"
         )
-        
-        # Create title
-        title = request.title if request.title else f"{CORPORATE_STYLES[request.corporate_style]['name']} Report"
-        
-        # Generate PDF report
-        pdf_path = os.path.join("tmp/pdfs", f"{session_id}_report.pdf")
-        
-        # Create PDF
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error generating story: {str(e)}")
+
+async def generate_pdf_report(title, content, pdf_path, style):
+    """Generate a branded PDF report from the story content"""
+    try:
         pdf = CorporateReportPDF(title=title)
         
-        # Add content sections from LLM-generated report
-        sections = report_content.split('\n\n')
-        current_section = ""
+        # Parse content sections (basic parsing)
+        sections = {
+            "Executive Summary": "",
+            "Key Insights": [],
+            "Business Implications": "",
+            "Recommendations": [],
+            "Next Steps": ""
+        }
         
-        for section in sections:
-            if section.strip().startswith('#'):
-                # This is a section header
-                section_title = section.strip().replace('#', '').strip()
-                pdf.section_title(section_title)
-            elif section.strip().startswith('*'):
-                # This is a bullet list
-                bullets = [item.strip().replace('*', '').strip() for item in section.split('\n')]
-                pdf.add_bullet_points(bullets)
-            else:
-                # This is paragraph text
-                if section.strip():
-                    pdf.section_body(section.strip())
+        current_section = None
+        for line in content.split('\n'):
+            line = line.strip()
+            if not line:
+                continue
+                
+            if line.startswith('# ') or line.startswith('## '):
+                section_name = line.replace('# ', '').replace('## ', '')
+                if section_name in sections:
+                    current_section = section_name
+            elif current_section:
+                if current_section in ["Key Insights", "Recommendations"]:
+                    if line.startswith('- ') or line.startswith('* '):
+                        sections[current_section].append(line.replace('- ', '').replace('* ', ''))
+                else:
+                    sections[current_section] += line + "\n"
         
-        # Add visualizations
-        if visualizations:
-            pdf.section_title("Data Visualizations")
-            for viz in visualizations[:3]:  # Include up to 3 visualizations
-                pdf.add_image(viz["path"])
-                pdf.image_caption(viz["description"])
+        # Add corporate header based on style
+        style_info = CORPORATE_STYLES.get(style, CORPORATE_STYLES["executive"])
+        
+        # Executive Summary
+        pdf.section_title("Executive Summary")
+        if sections["Executive Summary"]:
+            pdf.section_body(sections["Executive Summary"])
+        else:
+            pdf.section_body(style_info["intro"])
+        
+        # Key Insights
+        pdf.section_title("Key Insights")
+        if sections["Key Insights"]:
+            pdf.add_bullet_points(sections["Key Insights"])
+        else:
+            pdf.add_bullet_points(["Data analysis reveals important patterns that warrant attention", 
+                                   "Several metrics show significant deviation from expectations",
+                                   "There are clear opportunities for optimization across operations"])
+        
+        # Business Implications
+        pdf.section_title("Business Implications")
+        if sections["Business Implications"]:
+            pdf.section_body(sections["Business Implications"])
+        else:
+            pdf.section_body("These findings have substantial implications for business performance and strategy.")
+        
+        # Recommendations
+        pdf.section_title("Recommendations")
+        if sections["Recommendations"]:
+            pdf.add_bullet_points(sections["Recommendations"])
+        else:
+            pdf.add_bullet_points(["Implement targeted improvement initiatives based on the data",
+                                   "Focus resources on the highest-impact opportunities",
+                                   "Monitor progress with regular data review intervals"])
+        
+        # Next Steps
+        pdf.section_title("Next Steps")
+        if sections["Next Steps"]:
+            pdf.section_body(sections["Next Steps"])
+        else:
+            pdf.section_body("We recommend a follow-up analysis in 30 days to measure progress against these recommendations.")
         
         # Add footer
         pdf.add_footer()
         
         # Save PDF
         pdf.output(pdf_path)
-        
-        # Create response
-        story_response = StoryResponse(
-            report_id=session_id,
-            title=title,
-            preview=report_content[:500] + "...",
-            pdf_url=f"/tmp/pdfs/{session_id}_report.pdf"
-        )
-        
-        return story_response
-        
+        return True
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error generating story: {str(e)}")
+        print(f"Error generating PDF: {str(e)}")
+        traceback.print_exc()
+        return False
 
-@app.get("/download/{session_id}", response_class=FileResponse)
-async def download_report(session_id: str):
-    """Download the generated PDF report"""
-    pdf_path = os.path.join("tmp/pdfs", f"{session_id}_report.pdf")
-    
+@app.get("/reports/{report_id}")
+async def get_report(report_id: str):
+    pdf_path = f"static/pdfs/{report_id}.pdf"
     if not os.path.exists(pdf_path):
         raise HTTPException(status_code=404, detail="Report not found")
     
-    return FileResponse(
-        path=pdf_path, 
-        filename="corporate_data_report.pdf", 
-        media_type="application/pdf"
-    )
+    return FileResponse(pdf_path)
+
