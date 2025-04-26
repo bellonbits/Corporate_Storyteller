@@ -48,9 +48,9 @@ GROQ_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
 app = FastAPI(title="Corporate Data Storyteller", description="Transform business data into actionable insights with clear visualizations")
 
 # Create necessary directories
-os.makedirs("static/uploads", exist_ok=True)
-os.makedirs("static/visualizations", exist_ok=True)
-os.makedirs("static/pdfs", exist_ok=True)
+os.makedirs("tmp/uploads", exist_ok=True)
+os.makedirs("tmp/visualizations", exist_ok=True)
+os.makedirs("tmp/pdfs", exist_ok=True)
 
 # Mount static files directory
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -969,7 +969,7 @@ async def upload_file(background_tasks: BackgroundTasks, file: UploadFile = File
         }
         
         # Save session data
-        with open(os.path.join("static/uploads", f"{session_id}_info.json"), "w") as f:
+        with open(os.path.join("tmp/uploads", f"{session_id}_info.json"), "w") as f:
             json.dump(session_data, f, cls=NumpyEncoder)
         
         return {
@@ -989,7 +989,7 @@ async def analyze_data(session_id: str):
     """Perform basic analysis on the uploaded data"""
     try:
         # Load session data
-        with open(os.path.join("static/uploads", f"{session_id}_info.json"), "r") as f:
+        with open(os.path.join("tmp/uploads", f"{session_id}_info.json"), "r") as f:
             session_data = json.load(f)
         
         file_path = session_data["file_path"]
@@ -1014,7 +1014,7 @@ async def analyze_data(session_id: str):
         session_data["visualizations"] = visualizations
         session_data["recommendations"] = recommendations
         
-        with open(os.path.join("static/uploads", f"{session_id}_info.json"), "w") as f:
+        with open(os.path.join("tmp/uploads", f"{session_id}_info.json"), "w") as f:
             json.dump(session_data, f, cls=NumpyEncoder)
         
         return {
@@ -1032,7 +1032,7 @@ async def generate_story(session_id: str, request: StoryGenerationRequest):
     """Generate a data story with corporate styling"""
     try:
         # Load session data
-        with open(os.path.join("static/uploads", f"{session_id}_info.json"), "r") as f:
+        with open(os.path.join("tmp/uploads", f"{session_id}_info.json"), "r") as f:
             session_data = json.load(f)
         
         if not session_data.get("analysis_complete", False):
@@ -1055,7 +1055,7 @@ async def generate_story(session_id: str, request: StoryGenerationRequest):
         title = request.title if request.title else f"{CORPORATE_STYLES[request.corporate_style]['name']} Report"
         
         # Generate PDF report
-        pdf_path = os.path.join("static/pdfs", f"{session_id}_report.pdf")
+        pdf_path = os.path.join("tmp/pdfs", f"{session_id}_report.pdf")
         
         # Create PDF
         pdf = CorporateReportPDF(title=title)
@@ -1107,7 +1107,7 @@ async def generate_story(session_id: str, request: StoryGenerationRequest):
 @app.get("/download/{session_id}", response_class=FileResponse)
 async def download_report(session_id: str):
     """Download the generated PDF report"""
-    pdf_path = os.path.join("static/pdfs", f"{session_id}_report.pdf")
+    pdf_path = os.path.join("tmp/pdfs", f"{session_id}_report.pdf")
     
     if not os.path.exists(pdf_path):
         raise HTTPException(status_code=404, detail="Report not found")
